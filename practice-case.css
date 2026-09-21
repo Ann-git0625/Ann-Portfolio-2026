@@ -1,0 +1,28 @@
+/* Cases 05–06 share Case 02's section, typography and letter-heading components. */
+.practice-case .practice-thesis { margin-top: 0; }
+.practice-thesis-note { color: var(--moss); font-size: .8rem; line-height: 1.85; }
+.practice-case .practice-features { display: block; }
+.practice-case .you-feature-copy b { font-size: inherit; letter-spacing: inherit; }
+.practice-case .risk-inline-note p { font-size: inherit; line-height: inherit; margin: .5rem 0 0; }
+.practice-case .practice-features + .design-comparison { margin-top: 1.7rem; }
+.practice-case .micro-flow { font-size: .72rem; line-height: 1.85; letter-spacing: 0; margin: 1rem 0 0; }
+.practice-competency { margin: 1.3rem 0; }
+.practice-case .artifact-evidence-card figcaption { padding: 1rem; }
+.practice-case .artifact-evidence-card .risk-phase-heading { margin: 0 0 .5rem; }
+.practice-case .artifact-evidence-card .risk-phase-heading > span { color: var(--ink); font-size: 1.15rem; line-height: 1; }
+.practice-case .artifact-evidence-card h4 { color: var(--yellow); line-height: 1.65; }
+.practice-case .artifact-evidence-card figcaption > span { font-size: .83rem; font-weight: 400; line-height: 1.8; }
+.practice-case .artifact-evidence-card em { font-size: .75rem; line-height: 1.8; }
+.practice-case .knowledge-exp-example { margin-top: 1.3rem; }
+.practice-validation { padding: 1rem; }
+.practice-validation > span { font-size: .68rem; color: #425149; }
+.practice-validation h3 { padding: .7rem 0; }
+.practice-validation dl { margin: 0; }
+.practice-validation dl > div { display: grid; grid-template-columns: 90px minmax(0,1fr); gap: 1rem; padding: .65rem 0; border-top: 1px solid var(--line); }
+.practice-validation dt { font-size: .8rem; font-weight: 700; }
+.practice-validation dd { margin: 0; font-size: .82rem; line-height: 1.9; }
+@media (max-width: 780px) {
+  .practice-case .micro-flow { font-size: .7rem; gap: .35rem; }
+  .practice-case .practice-competency { grid-template-columns: 1fr; }
+  .practice-validation dl > div { grid-template-columns: 1fr; gap: .3rem; }
+}

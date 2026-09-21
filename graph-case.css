@@ -1,0 +1,51 @@
+/* Case 04 reuses risk-case + you-case verbatim for type, spacing and A–E labels. */
+.graph-core { margin: 1.7rem 0 2.2rem; padding: 1.25rem; border: 1px solid var(--ink); background: var(--cream); }
+.graph-core-label { color: var(--red); font: .61rem/1.8 var(--mono); letter-spacing: .07em; margin-bottom: 1rem; }
+.graph-core-path { display: grid; grid-template-columns: minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr); align-items: center; gap: .5rem; }
+.graph-core-path > div { padding: .7rem .5rem; min-width: 0; }
+.graph-core-path > div:last-of-type { background: var(--moss); border: 1px solid var(--pine); padding: .9rem; }
+.graph-core-path small { font: .6rem/1.8 var(--mono); color: var(--pine); letter-spacing: .05em; }
+.graph-core-path h4 { font: 700 .95rem/1.8 var(--sans); margin: .45rem 0; }
+.graph-core-path p { margin: 0; font: .8rem/1.85 var(--sans); }
+.graph-core-path > svg { width: 24px; height: 24px; color: var(--pine); }
+.graph-core-return { display: flex; align-items: center; justify-content: center; gap: .75rem; margin-top: 1rem; padding: .7rem 0; border-top: 1px solid var(--line); color: var(--pine); font: .8rem/1.85 var(--sans); }
+.graph-core-return svg { width: 30px; height: 30px; flex: 0 0 30px; }
+.graph-case .graph-core figcaption { display: block; padding: .3rem 0 0; color: #425149; font: .72rem/1.85 var(--sans); }
+.graph-core-functions { margin-bottom: 1.5rem; }
+.graph-return svg { display: block; width: 32px; height: 32px; }
+.graph-return > span { flex: 0 0 32px; }
+.graph-neighborhood { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr); align-items: center; gap: 1.6rem; padding: 1.3rem; background: var(--cream); border: 1px solid var(--line); }
+.graph-neighbors { display: grid; gap: .55rem; min-width: 0; }
+.graph-neighbors small { color: var(--pine); font-size: .7rem; line-height: 1.7; }
+.graph-neighbors > span { display: block; padding: .6rem; text-align: center; border: 1px solid var(--line); background: var(--paper); font-size: .8rem; }
+.graph-center { position: relative; display: grid; gap: .7rem; padding: 1.3rem .65rem; text-align: center; color: var(--paper); background: var(--pine); }
+.graph-center::before, .graph-center::after { content: ''; position: absolute; height: 1px; width: 1.6rem; top: 50%; background: var(--pine); }
+.graph-center::before { right: 100%; }.graph-center::after { left: 100%; }
+.graph-center small { color: var(--yellow); font: .6rem/1.7 var(--mono); }
+.graph-center strong { font-size: 1rem; line-height: 1.8; }
+.graph-center > span { font-size: .72rem; line-height: 1.8; }
+.graph-case .graph-state-count { margin-top: .6rem; font-size: .72rem; color: var(--pine); }
+.graph-recommendation { margin-top: 1.2rem; }
+.graph-inputs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .7rem; }
+.graph-inputs > div { padding: 1rem; background: var(--cream); border-top: 2px solid var(--red); min-width: 0; }
+.graph-inputs small { color: var(--red); font: .6rem/1.8 var(--mono); }
+.graph-inputs b { display: block; margin: .5rem 0; font-size: .95rem; }
+.graph-inputs p { margin: 0; font-size: .8rem; line-height: 1.85; }
+.graph-recommend-arrow { display: grid; place-items: center; padding-top: .65rem; }
+.graph-recommend-arrow svg { width: 24px; height: 24px; transform: rotate(90deg); color: var(--pine); }
+.graph-recommendation .risk-shared-data { margin-top: .65rem; }
+.graph-question { margin-top: 1rem; }
+.graph-question .you-feature-copy { margin-bottom: 0; }
+.graph-practice-image img { max-width: 406px; margin-inline: auto; }
+.graph-validation > div:last-child { grid-column: 1 / -1; }
+@media(max-width:780px) {
+  .graph-core { padding: 1rem; }
+  .graph-core-path { grid-template-columns: 1fr; gap: .15rem; }
+  .graph-core-path > svg { transform: rotate(90deg); justify-self: center; }
+  .graph-core-path > div { padding: .65rem; text-align: center; }
+  .graph-core-return { justify-content: flex-start; }
+  .graph-neighborhood { grid-template-columns: 1fr; gap: 1.2rem; padding: 1rem; }
+  .graph-center::before, .graph-center::after { width: 1px; height: 1.2rem; left: 50%; right: auto; }
+  .graph-center::before { top: auto; bottom: 100%; }.graph-center::after { top: 100%; }
+  .graph-inputs { grid-template-columns: 1fr; }
+}
