@@ -1,0 +1,110 @@
+/* Research reuses the portfolio card and shared case typography. */
+.research { padding-top: 0; }
+.research .exploration-heading { margin-top: 0; }
+.research .exploration-heading h2 { max-width: 770px; margin: 0 0 1.3rem; font-size: clamp(2rem, 3.5vw, 4rem); line-height: 1.25; letter-spacing: -.05em; }
+.research .exploration-heading h2 i { color: var(--red); font-weight: 400; }
+.research-card .card-arrow svg { display: block; width: 16px; height: 16px; }
+.research-card .research-screen { background: var(--pine); }
+.research-card-scope { display: block; margin-top: .65rem; padding-right: 1.6rem; color: var(--pine); font-size: .7rem; line-height: 1.8; }
+.research-card .card-copy { padding: 1.3rem 0 0; min-width: 0; }
+.research-case .risk-case-nav { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; }
+.research-case .risk-case-nav a { line-height: 1.7; white-space: nowrap; }
+.research-reference a { text-decoration: underline; text-underline-offset: 3px; }
+.research-reference a:hover { color: var(--red); }
+.research-reference a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+.research-evidence-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .75rem; }
+.research-evidence-grid > div { min-width: 0; padding: 1.15rem; background: var(--cream); border-top: 2px solid var(--pine); }
+.research-evidence-grid > div:last-child { background: var(--moss); }
+.research-evidence-grid span { color: var(--red); font: 700 .65rem/1.8 var(--sans); letter-spacing: .06em; }
+.research-evidence-grid h4 { margin: .75rem 0 .6rem; font: 700 1.05rem/1.65 var(--sans); }
+.research-evidence-grid p { margin: 0; font: var(--case-card)/1.85 var(--sans); }
+.research-hypothesis { margin-top: 1.5rem; }
+.research-hypothesis > p { margin-bottom: 0; }
+.research-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.6rem 1rem; margin-top: 1.7rem; }
+.research-figure { margin: 0; min-width: 0; }
+.research-image-open { display: block; position: relative; width: 100%; height: 280px; padding: .85rem; border: 1px solid var(--line); background: #fff; cursor: zoom-in; }
+.research-image-open img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.research-image-open > span { position: absolute; bottom: .65rem; right: .65rem; display: grid; place-items: center; width: 1.8rem; height: 1.8rem; background: var(--paper); border: 1px solid var(--ink); border-radius: 50%; font-size: 1rem; }
+.research-image-open:hover > span { background: var(--yellow); }
+.research-image-open:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.research-case .research-figure figcaption { padding: .75rem 0 0; }
+.research-case .research-figure figcaption b { color: var(--pine); }
+.research-case .research-figure figcaption span { color: #425149; font: .75rem/1.8 var(--sans); }
+.research-lightbox img { background: #fff; }
+.research-table-note { margin: 1.5rem 0 1rem; font: var(--case-card)/1.85 var(--sans); }
+.research-feedback-list { border-top: 1px solid var(--ink); }
+.research-feedback-list > article { padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.research-feedback-list .risk-phase-heading { margin: 0 0 1rem; }
+.research-feedback-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.research-feedback-pair > div { background: var(--cream); padding: 1rem; min-width: 0; }
+.research-feedback-pair > div:last-child { background: var(--risk-soft); }
+.research-feedback-pair b { color: var(--pine); font: 700 .7rem/1.8 var(--sans); }
+.research-feedback-pair p { margin: .5rem 0 0; font: var(--case-card)/1.85 var(--sans); }
+.research-limits { margin: 0; padding-left: 1.3rem; font: var(--case-body)/1.95 var(--sans); }
+.research-limits li + li { margin-top: .65rem; }
+.research-reference { margin-top: 2rem; padding: 1.3rem; background: var(--cream); font: .8rem/1.9 var(--sans); }
+.research-reference p { margin: 0 0 .7rem; }
+.research-reference .text-link { font-size: .8rem; margin-top: .5rem; }
+@media (max-width: 780px) {
+  .research { padding-top: 0; }
+  .research .exploration-heading { grid-template-columns: 1fr; gap: 1.5rem; }
+  .research-evidence-grid, .research-feedback-pair { grid-template-columns: 1fr; }
+  .research-case .risk-case-nav { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .2rem .35rem; }
+  .research-case .risk-case-nav a { min-height: 36px; font-size: clamp(.58rem, 2.7vw, .7rem); }
+}
+@media (max-width: 560px) {
+  .research-gallery { grid-template-columns: 1fr; }
+  .research-image-open { height: 260px; }
+  .site-header nav { gap: .8rem; }
+}
+@media (max-width: 520px) {
+  .site-header { grid-template-columns: 1fr; height: auto; padding-top: 1rem; gap: .55rem; }
+  .site-header nav { gap: 1.2rem; }
+}
+
+/* The SVG viewport removes the heading without cropping the lower diagram. */
+.research-overview { display: block; width: 100%; height: auto; aspect-ratio: 1920 / 969; overflow: hidden; }
+.research-card .research-screen { min-width: 0; min-height: 0; }
+.research-card .research-screen .research-overview { flex: 1 1 auto; min-height: 0; height: 100%; }
+.research-card .screen-label, .research-card .screen-caption { flex: 0 0 auto; }
+.research-overview-figure { margin: 1.7rem 0 2rem; }
+.research-image-open.research-overview-open { height: auto; padding: 0; background: #ecd9d5; }
+.research-overview-open .research-overview { height: auto; }
+.research-lightbox-overview { display: none; width: 100%; height: auto; max-height: calc(100dvh - 7rem); overflow: hidden; }
+.research-lightbox.is-overview #research-lightbox-image { display: none; }
+.research-lightbox.is-overview .research-lightbox-overview { display: block; }
+.research-prototype-groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem; }
+.research-prototype-group { min-width: 0; }
+.research-prototype-group .risk-phase-heading { margin-top: 0; }
+.research-prototype-group .risk-design-rows > div { grid-template-columns: 24px minmax(0,1fr); gap: .4rem .75rem; }
+.research-prototype-group .risk-design-rows p { grid-column: 2; }
+@media (min-width: 781px) {
+  .research-grid .research-card { min-height: 0; height: clamp(440px, 34vw, 580px); }
+  .research-card .project-open { min-height: 0; grid-template-rows: auto minmax(0,1fr); padding: 2rem 2rem 4.6rem; }
+}
+@media (max-width: 780px) {
+  .research-grid .research-card { min-height: 0; height: auto; }
+  .research-grid .research-card .project-open { padding: 1rem 1rem 4rem; }
+  .research-grid .research-card .card-copy { padding-bottom: 0; }
+  .research-card .research-screen .research-overview { flex: none; height: auto; }
+  .research-prototype-groups { grid-template-columns: 1fr; gap: 1.7rem; }
+}
+
+
+/* Reference arrow: open circle, short head, no platform-dependent glyph. */
+.research-card .card-arrow { right: 1.1rem; bottom: 1.1rem; width: 2.5rem; height: 2.5rem; background: transparent; color: var(--ink); }
+.research-card .project-open:hover .card-arrow { background: transparent; color: var(--ink); transform: none; }
+.research-card .card-arrow svg { width: 16px; height: 16px; }
+.research-case .case-return-arrow { flex-basis: 16px; width: 16px; height: 16px; }
+
+/* Redrawn vector diagrams use the existing palette and font outlines. */
+.research-diagram-figure { margin: 2rem 0; }
+.research-diagram-heading { margin: 0 0 1rem; font: 700 1.05rem/1.65 var(--sans); color: var(--pine); }
+.research-image-open.research-diagram-open { height: auto; padding: 0; background: var(--paper); }
+.research-diagram-open picture { display: block; }
+.research-diagram-open img { display: block; width: 100%; height: auto; object-fit: contain; }
+.research-diagram-open > span { width: 1.6rem; height: 1.6rem; bottom: .45rem; right: .45rem; }
+.research-lightbox.is-diagram[open] { display: block; overflow-y: auto; padding-top: 5.5rem; padding-bottom: 3rem; }
+.research-lightbox.is-diagram img { width: min(100%, 960px); max-width: 100%; max-height: none; height: auto; margin: 0 auto; background: var(--paper); }
+.research-lightbox.is-diagram p { position: static; transform: none; text-align: center; margin: 1rem 0 0; }
+.research-lightbox.is-diagram .ue-lightbox-close { background: var(--ink); }
