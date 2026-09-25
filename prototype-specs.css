@@ -1,0 +1,15 @@
+/* Added prototype evidence stays within the established case-study layout. */
+.prototype-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.3rem 0}
+.prototype-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.7rem 1rem;border:1px solid var(--pine);font-size:.8rem;font-weight:700;line-height:1.5}
+.prototype-actions .prototype-primary{background:var(--pine);color:var(--paper)}
+.prototype-actions a:hover{background:var(--moss);color:var(--ink)}
+.prototype-actions a:focus-visible,.prototype-image-open:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.prototype-board{margin:1.5rem 0;background:var(--ink);padding:.7rem;color:var(--paper)}
+.prototype-image-open{display:block;width:100%;padding:0;margin:0;border:0;border-radius:0;background:transparent;cursor:zoom-in;line-height:0}
+.prototype-board img{display:block;width:100%;height:auto;background:#f0f1f5}
+.prototype-spec-list{margin:1.4rem 0 0;border-top:1px solid var(--line)}
+.prototype-spec-list>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.prototype-spec-list dt{font-size:.84rem;font-weight:700;color:var(--pine)}
+.prototype-spec-list dd{margin:0;font-size:.83rem;line-height:1.9}
+.risk-main-artifact:has(img[src$="risk-web-dashboard.png"]){margin-top:1.3rem}
+@media(max-width:680px){.prototype-spec-list>div{grid-template-columns:1fr;gap:.35rem}.prototype-actions a{flex:1 1 200px}.prototype-board{padding:.4rem}.prototype-spec{scroll-margin-top:4rem}}
