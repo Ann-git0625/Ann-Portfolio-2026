@@ -1,0 +1,33 @@
+/* Added prototype evidence stays within the established case-study layout. */
+.prototype-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.3rem 0}
+.prototype-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.7rem 1rem;border:1px solid var(--pine);font-size:.8rem;font-weight:700;line-height:1.5}
+.prototype-actions .prototype-primary{background:var(--pine);color:var(--paper)}
+.prototype-actions a:hover{background:var(--moss);color:var(--ink)}
+.prototype-actions a:focus-visible,.prototype-image-open:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+.prototype-board{margin:1.5rem 0;background:var(--ink);padding:.7rem;color:var(--paper)}
+.prototype-image-open{display:block;width:100%;padding:0;margin:0;border:0;border-radius:0;background:transparent;cursor:zoom-in;line-height:0}
+.prototype-board img{display:block;width:100%;height:auto;background:#f0f1f5}
+.prototype-spec-list{margin:1.4rem 0 0;border-top:1px solid var(--line)}
+.prototype-spec-list>div{display:grid;grid-template-columns:200px minmax(0,1fr);gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.prototype-spec-list dt{font-size:.84rem;font-weight:700;color:var(--pine)}
+.prototype-spec-list dd{margin:0;font-size:.83rem;line-height:1.9}
+.risk-main-artifact:has(img[src$="risk-web-dashboard.png"]){margin-top:1.3rem}
+@media(max-width:680px){.prototype-spec-list>div{grid-template-columns:1fr;gap:.35rem}.prototype-actions a{flex:1 1 200px}.prototype-board{padding:.4rem}.prototype-spec{scroll-margin-top:4rem}}
+
+.prototype-demo { margin-top: 2rem; }
+.prototype-demo > h4 { margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.65; }
+.prototype-demo .case-video { margin: 0; }
+.video-player { position: relative; }
+.case-video .video-player video { aspect-ratio: 192 / 91; object-fit: contain; }
+.video-play {
+  position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%);
+  display: flex; align-items: center; gap: .65rem; min-height: 48px;
+  padding: .85rem 1.25rem; border: 1px solid var(--paper); border-radius: 999px;
+  background: var(--ink); color: var(--paper); font: 700 .85rem/1.4 var(--sans);
+  white-space: nowrap; cursor: pointer; box-shadow: 0 3px 18px #0005;
+}
+.video-play:hover { background: var(--pine); }
+.video-play:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+.case-video .video-play span { padding: 0; font-size: .85rem; }
+.case-video .video-status { margin: .8rem 0 0; color: var(--paper); font-size: .8rem; line-height: 1.6; }
+.video-play[hidden], .video-status[hidden] { display: none; }
