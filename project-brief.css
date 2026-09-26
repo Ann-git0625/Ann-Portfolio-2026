@@ -1,0 +1,100 @@
+/* Compact, connected editorial brief shared by all eight projects. */
+.dialog-toolbar { display: contents; }
+.project-brief {
+  --brief-paper: #f0ede3;
+  --brief-ink: #253f34;
+  clear: both;
+  margin: 1.35rem 0 1.1rem;
+  color: var(--brief-ink);
+  border: 1px solid #bcc5b9;
+  background: var(--brief-paper);
+}
+.brief-main { padding: 1.5rem 2.15rem 1.55rem; background: #244237; color: #f5f2e9; }
+.brief-topline { display: flex; align-items: baseline; justify-content: space-between; gap: 1.25rem; margin-bottom: .85rem; }
+.brief-number { font: 400 1.2rem/1 var(--serif); color: #cbd4c8; }
+.risk-case .project-brief .brief-title {
+  font: 400 clamp(1.5rem, 2.05vw, 1.85rem)/1.6 var(--serif);
+  letter-spacing: 0; margin: 0; text-wrap: pretty;
+}
+.brief-title em { color: var(--yellow); font-style: normal; }
+.risk-case .brief-summary { margin: .75rem 0 0; color: #e0e7dc; font: 400 .88rem/1.85 var(--sans); text-wrap: pretty; }
+.brief-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; padding: 1.3rem 2.15rem; }
+.brief-grid > div { min-width: 0; padding: 0 1rem; border-left: 1px solid #c8cec2; }
+.brief-grid > div:first-child { padding-left: 0; border-left: 0; }
+.brief-grid > div:last-child { padding-right: 0; }
+.brief-grid dt { display: flex; align-items: center; gap: .45rem; color: #4c6355; font: 700 .59rem/1.5 var(--sans); letter-spacing: .11em; }
+.brief-icon { display: flex; align-items: center; color: #627568; }
+.brief-icon svg { display: block; width: 1.2rem; height: 1.2rem; }
+.risk-case .brief-grid dd { margin: .55rem 0 0; font: 400 .84rem/1.85 var(--sans); color: #2b4036; text-wrap: pretty; }
+
+/* One reading rhythm for body copy and reference components. */
+.risk-case { --case-body: .94rem; --case-feature: .94rem; --case-card: .88rem; --case-data: .86rem; }
+.risk-case .risk-section-intro, .risk-case .you-feature-copy { line-height: 1.95; text-wrap: pretty; }
+.risk-case .risk-section-intro { margin: 0 0 1.4rem; }
+.risk-case .risk-phase-heading p, .risk-case .hanazono-stages p { font: var(--case-card)/1.9 var(--sans); }
+.risk-case .risk-phase-heading .collaboration-copy { margin-top: .9rem; }
+.risk-case .risk-inline-note { font: .84rem/1.9 var(--sans); }
+.risk-case .risk-problem-grid dd { font: var(--case-card)/1.9 var(--sans); }
+.risk-case .risk-problem-grid { align-items: stretch; }
+.hanazono-case .judgment-summary { margin-top: 1.75rem; }
+.risk-problem-grid-pair, .research-question-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.section-index-bilingual { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .7rem; }
+.section-index-bilingual .section-name { color: #57685b; border-left: 1px solid #b9bdb0; padding-left: .75rem; font: 400 .7rem/1.65 var(--sans); letter-spacing: .08em; }
+#approach-title i { color: #3b3029; }
+.case-video > span { display: block; margin-top: .6rem; }
+.hanazono-video-footer { justify-content: flex-start; }
+
+@media (max-width: 780px) {
+  .project-dialog { scroll-padding-top: 4.25rem; }
+  .dialog-toolbar { position: sticky; top: -1.5rem; z-index: 3; display: flex; justify-content: flex-end; margin: -1.5rem -1.5rem 1rem; padding: .6rem 1rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .dialog-toolbar .dialog-close { position: static; float: none; }
+  .brief-main { padding: 1.35rem 1.5rem; }
+  .brief-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 0; padding: 1.1rem 1.5rem; }
+  .brief-grid > div { padding: 0 1rem; }
+  .brief-grid > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .brief-grid > div:nth-child(even) { padding-right: 0; }
+  .brief-grid > div:nth-child(n+3) { border-top: 1px solid #c8cec2; padding-top: 1rem; }
+  .risk-case .project-brief .brief-title { font-size: clamp(1.3rem, 3.2vw, 1.75rem); }
+  .risk-case .risk-problem-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .project-brief { margin-top: 1.1rem; }
+  .brief-main { padding: 1.05rem 1.2rem 1.15rem; }
+  .brief-topline { gap: .6rem; margin-bottom: .8rem; align-items: flex-start; }
+        .brief-number { font-size: 1rem; }
+  .risk-case .project-brief .brief-title { font-size: 1.3rem; line-height: 1.65; }
+  .brief-title br { display: none; }
+  .risk-case .brief-summary { font-size: .83rem; line-height: 1.85; margin-top: .65rem; }
+  .brief-grid { grid-template-columns: 1fr; gap: 0; padding: .15rem 1.2rem; }
+  .brief-grid > div, .brief-grid > div:nth-child(n) { display: grid; grid-template-columns: 5.1rem minmax(0, 1fr); gap: .55rem; border-left: 0; border-top: 1px solid #c8cec2; padding: .85rem 0; }
+  .brief-grid > div:first-child { border-top: 0; }
+  .brief-grid dt { gap: .45rem; font-size: .54rem; letter-spacing: .04em; align-self: start; flex-wrap: wrap; }
+  .brief-icon svg { width: 1rem; height: 1rem; }
+  .risk-case .brief-grid dd { margin: 0; font-size: .81rem; line-height: 1.8; }
+  .section-index-bilingual { gap: .35rem .6rem; }
+  .section-index-bilingual .section-name { padding-left: .65rem; font-size: .68rem; }
+}
+@media (max-width: 360px) {
+  .brief-grid > div, .brief-grid > div:nth-child(n) { display: block; padding: .75rem 0; }
+  .brief-grid dt { display: flex; gap: .5rem; }
+  .risk-case .brief-grid dd { margin-top: .35rem; }
+}
+
+/* Project identity is the main heading; the brief explains its central idea. */
+.risk-case #dialog-title.case-display-title {
+  clear: both;
+  margin: 1.15rem 0 1.25rem;
+  color: var(--ink);
+  font: 400 clamp(2.1rem, 3.45vw, 3rem)/1.3 var(--serif);
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.case-display-title + .project-brief { margin-top: 0; }
+.brief-kicker { color: var(--yellow); font: 400 .57rem/1.5 var(--sans); letter-spacing: .17em; }
+@media (max-width: 780px) {
+  .risk-case #dialog-title.case-display-title { font-size: clamp(1.9rem, 4.6vw, 2.6rem); margin: .9rem 0 1.1rem; line-height: 1.4; }
+}
+@media (max-width: 480px) {
+  .risk-case #dialog-title.case-display-title { font-size: clamp(1.7rem, 7.3vw, 2.1rem); margin: .9rem 0 1rem; line-height: 1.4; }
+  .brief-kicker { font-size: .53rem; letter-spacing: .14em; }
+}
