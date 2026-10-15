@@ -1,0 +1,17 @@
+Software icons used in the portfolio skills section
+
+Figma, Unreal Engine, Blender, Git: Simple Icons (CC0-1.0).
+Source repository: https://github.com/simple-icons/simple-icons
+https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/figma.svg
+https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/unrealengine.svg
+https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg
+https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/git.svg
+License: https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
+
+3ds Max: Devicon (MIT), original 3ds Max mark.
+https://github.com/devicons/devicon/blob/master/icons/threedsmax/threedsmax-original.svg
+License: https://github.com/devicons/devicon/blob/master/LICENSE
+
+SVG geometry is unchanged. Colors adapted to the portfolio sage palette.
+AI sparkle: original simple vector drawn for the portfolio.
+Ps / Ai / Pr remain conventional software letter marks with visible full names.

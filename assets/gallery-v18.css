@@ -1,0 +1,54 @@
+/* v18: captions belong below the artwork, without badges over the images.
+   Load after profile-gallery-v15.css and the current palette styles. */
+
+#visual .archive-wall {
+  row-gap: 24px;
+}
+
+#visual .archive-tile > figcaption {
+  position: static;
+  inset: auto;
+  display: block;
+  width: auto;
+  max-width: none;
+  margin: 9px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #505c56;
+  font-family: var(--sans, sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: .02em;
+  text-align: left;
+  text-wrap: pretty;
+  pointer-events: auto;
+}
+
+/* Arrow spans are removed by gallery-v18.py; this also protects a stale
+   cached fragment from bringing the decorative badges back. */
+#visual .archive-tile-plus {
+  display: none;
+}
+
+#visual .archive-image-open:focus-visible {
+  outline: 3px solid #466474;
+  outline-offset: 3px;
+}
+
+#visual .archive-image-open:hover img,
+#visual .archive-image-open:focus-visible img {
+  filter: none;
+}
+
+@media (max-width: 520px) {
+  #visual .archive-wall {
+    row-gap: 18px;
+  }
+
+  #visual .archive-tile > figcaption {
+    margin-top: 7px;
+  }
+}
