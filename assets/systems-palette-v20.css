@@ -1,0 +1,48 @@
+/* Warm stone and ivory distinguish Systems & Research from the other collections.
+   Only the home-page section and its preview frames are recolored; artwork and
+   project dialogs retain their own presentation. */
+#research-work.work.collection.collection-2 {
+  background: #eee9e1;
+  border-color: #d4cdbf;
+}
+#research-work .collection-heading-rule {
+  background: #c1baab;
+}
+#research-work .collection-heading-kicker {
+  color: #5e6b56;
+}
+#research-work .project-open .card-visual,
+#research-work .project-open .card-visual.document-card-visual,
+#research-work .project-open .card-visual.knowledge-document-cover {
+  background: #faf9f5;
+  border-color: #d4cdbf;
+  box-shadow: 0 2px 8px rgb(71 61 41 / 3%);
+}
+#research-work .project-open:is(:hover, :focus-visible) .card-visual {
+  background: #fffdf8;
+  border-color: #b7ac98;
+  box-shadow: 0 7px 20px rgb(71 61 41 / 7%);
+}
+#research-work .project-open :is(.screen-label, .screen-caption, .document-card-heading > span, .document-card-footer) {
+  color: #5b6756;
+}
+#research-work .document-card-heading > b {
+  color: #354d3d;
+}
+#research-work .document-card-pages .showcase-document {
+  border-color: #d8d1c5;
+  box-shadow: 0 10px 20px rgb(71 61 41 / 10%);
+}
+#research-work .knowledge-card-paper {
+  background: #fffdf8;
+  border-color: #d8d1c5;
+  box-shadow: 0 10px 19px rgb(71 61 41 / 10%);
+}
+#research-work .case-status {
+  background: #f8f6f0;
+  border-color: #c9c1b2;
+  color: #5b6756;
+}
+#research-work .card-arrow {
+  border-top-color: #c9c1b2;
+}

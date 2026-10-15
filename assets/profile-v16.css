@@ -1,0 +1,44 @@
+/* Keep the biography, education and work history in one balanced composition. */
+.profile-v16 .profile-bio-layout{grid-template-areas:'summary history' 'education history';grid-template-columns:minmax(0,.93fr) minmax(0,1.15fr);column-gap:clamp(36px,5vw,88px);row-gap:28px;align-items:start}
+.profile-v16 .profile-summary{grid-area:summary}
+.profile-v16 .profile-history{grid-area:history}
+.profile-v16 .profile-education{grid-area:education;margin:0;padding:0}
+.profile-v16 .profile-photo{width:108px;height:108px;flex-basis:108px;max-width:none;max-height:none}
+.profile-v16 .profile-heading{margin-bottom:24px}
+.profile-v16 .profile-heading .section-index{display:flex;align-items:center;gap:13px;line-height:1.7}
+.profile-v16 .profile-name{display:inline-block;padding-left:13px;border-left:1px solid #b6c2a9;color:#53664a;font:400 11px/1.5 var(--sans);letter-spacing:.1em;white-space:nowrap}
+.profile-v16 .profile-heading h2{margin-top:9px}
+.profile-v16 .education-list{gap:22px}
+.profile-v16 .profile-capabilities{margin-top:38px}
+.profile-v16 .capability-body{grid-template-columns:minmax(0,165px) 136px;gap:16px;justify-content:start}
+.profile-v16 .capability-software{padding-left:12px}
+.profile-section.profile-v16{padding-bottom:36px}
+@media(max-width:1100px){
+ .profile-v16 .profile-photo{width:94.5px;height:94.5px;flex-basis:94.5px}
+ .profile-v16 .profile-bio-layout{column-gap:35px}
+ .profile-v16 .profile-heading{gap:16px}
+ .profile-v16 .profile-heading h2{font-size:clamp(26px,2.8vw,31px)}
+ .profile-v16 .capability-body{grid-template-columns:minmax(0,150px) 122px;gap:12px}
+}
+@media(max-width:800px){
+ .profile-v16 .profile-bio-layout{grid-template-areas:'summary' 'history' 'education';grid-template-columns:1fr;row-gap:28px}
+ .profile-v16 .profile-heading h2{font-size:34px}
+ .profile-v16 .capability-body{grid-template-columns:minmax(0,200px) 136px;gap:20px}
+ .profile-v16 .capability-skills{columns:1}
+ .profile-v16 .capability-software .software-icon-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+ .profile-v16 .profile-photo{width:90px;height:90px;flex-basis:90px}
+ .profile-v16 .profile-heading{gap:14px}
+ .profile-v16 .profile-heading h2{font-size:29px}
+ .profile-v16 .capability-body{grid-template-columns:minmax(0,165px) 132px;gap:14px}
+ .profile-v16 .profile-capabilities{margin-top:32px}
+}
+@media(max-width:360px){
+ .profile-v16 .profile-photo{width:72px;height:72px;flex-basis:72px}
+ .profile-v16 .profile-heading h2{font-size:23px;white-space:nowrap}
+ .profile-v16 .profile-heading h2 i{font-size:1.2em}
+ .profile-v16 .profile-heading .section-index{gap:8px}
+ .profile-v16 .profile-name{padding-left:8px;font-size:10px}
+ .profile-v16 .capability-body{grid-template-columns:minmax(0,1fr) 124px;gap:10px}
+}

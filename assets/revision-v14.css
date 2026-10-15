@@ -1,0 +1,252 @@
+/* v14: make the living geometry the main composition, rather than an illustration slot. */
+.hero.hero-studio{
+  min-height:max(760px,100svh);
+  padding:98px clamp(24px,4vw,76px) 22px;
+  background:radial-gradient(ellipse at 50% 44%,#3f5a3b29 0%,#263c2920 32%,transparent 66%),#192924;
+}
+.hero-studio:before{
+  top:49%;
+  width:min(82vw,1160px);
+  border-color:#d6e0c511;
+}
+.hero.hero-studio .hero-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto auto;
+  align-content:center;
+  align-items:start;
+  gap:0;
+  flex:1;
+  width:100%;
+  max-width:1680px;
+  min-height:0;
+  margin:0 auto;
+}
+.hero-studio .hero-kicker{font-size:8px;letter-spacing:.14em;opacity:.8}
+.hero-studio .hero-copy{
+  position:absolute;
+  z-index:2;
+  top:7%;
+  left:0;
+  width:clamp(210px,22vw,340px);
+  padding:0;
+  text-align:left;
+  justify-self:start;
+}
+.hero.hero-studio .hero-copy .eyebrow{
+  font-size:8px;
+  line-height:1.6;
+  letter-spacing:.16em;
+  margin:0 0 15px;
+  color:#b3c0a8;
+}
+.hero.hero-studio .hero-copy h1{
+  font-size:clamp(34px,3.1vw,54px);
+  line-height:1.36;
+  letter-spacing:-.045em;
+  text-wrap:nowrap;
+}
+.hero-studio .hero-copy h1 i{display:block;color:#d3dec0}
+.hero.hero-studio .hero-explorer{
+  grid-column:1;
+  grid-row:1;
+  display:flex;
+  flex-direction:column;
+  align-self:center;
+  justify-self:center;
+  width:min(84vw,1180px);
+  max-width:100%;
+  height:auto;
+  min-height:0;
+  margin:0;
+  padding:0;
+}
+.hero-studio .hero-explorer .sculpture{
+  flex:none;
+  width:100%;
+  height:clamp(540px,70svh,790px);
+  min-height:0;
+  aspect-ratio:auto;
+  overflow:visible;
+}
+.hero-studio .hero-explorer .sculpture-svg{
+  inset:0;
+  left:0;
+  width:100%;
+  height:100%;
+  transform:none;
+  overflow:visible;
+}
+.hero-studio .sculpture-frame{opacity:.38}
+.hero-studio .sculpture-corners{opacity:.2}
+.hero-studio .hero-explorer .sculpture-controls{
+  width:min(100%,590px);
+  margin:0 auto;
+  padding:0;
+  gap:36px;
+}
+.hero-studio .sculpture-controls button{
+  min-height:57px;
+  padding:5px 0 8px;
+  column-gap:10px;
+  row-gap:3px;
+}
+.hero-studio .sculpture-controls button em{font-size:27px}
+.hero-studio .sculpture-controls .stage-name{font-size:9px;letter-spacing:.065em}
+.hero-studio .hero-orbit-note{width:150px;top:auto}
+.hero-studio .orbit-left{bottom:17%;left:0}
+.hero-studio .orbit-right{top:46%;right:0}
+.hero-studio .hero-orbit-note:before{width:clamp(20px,3vw,50px);background:#d6e0c528}
+.hero-studio .hero-orbit-note p{font-size:15px;line-height:1.7;margin-top:10px}
+.hero-studio .hero-orbit-note>span{font-size:8px;letter-spacing:.08em}
+.hero-studio .hero-interaction-hint{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  column-gap:6px;
+  row-gap:0;
+  grid-column:1;
+  grid-row:2;
+  margin:6px 0 0;
+  min-height:32px;
+  font-size:10px;
+  line-height:1.6;
+  letter-spacing:.035em;
+  color:#a2b198;
+}
+.hero-studio .hero-interaction-hint>span{margin-right:3px}
+.hero-studio .hero-motion-toggle{
+  appearance:none;
+  align-items:center;
+  min-height:32px;
+  padding:3px 0 3px 15px;
+  margin:0 0 0 9px;
+  border:0;
+  border-left:1px solid #c8d1bd35;
+  border-radius:0;
+  background:none;
+  color:#becbb1;
+  font:400 9px/1.6 var(--sans);
+  letter-spacing:.04em;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.hero-studio .hero-motion-toggle:not([hidden]){display:inline-flex}
+.hero-studio .hero-motion-toggle[hidden]{display:none}
+.hero-studio .hero-motion-toggle:hover{color:#e7d48e}
+.hero-studio .hero-motion-toggle:focus-visible{outline:1px solid #c6b674;outline-offset:4px}
+.hero.hero-studio .hero-foot{
+  gap:20px;
+  min-height:42px;
+  padding-top:12px;
+  margin-top:9px;
+}
+.hero-studio .hero-foot .text-link{min-height:30px}
+.hero-studio .hero-foot .replay-intro{min-height:30px}
+
+@media(min-width:1600px){
+  .hero.hero-studio{min-height:100svh;padding-top:110px;padding-bottom:24px}
+  .hero.hero-studio .hero-explorer{width:min(82vw,1320px);min-height:0}
+  .hero-studio .hero-explorer .sculpture{height:clamp(680px,70svh,880px)}
+  .hero-studio .hero-copy{top:8%;padding:0}
+  .hero-studio .hero-orbit-note p{font-size:17px}
+}
+@media(min-width:781px) and (max-width:1100px){
+  .hero-studio .hero-copy{width:220px;top:5%}
+  .hero.hero-studio .hero-copy h1{font-size:34px}
+  .hero-studio .hero-orbit-note{width:120px}
+  .hero-studio .hero-orbit-note p{font-size:12px}
+  .hero-studio .hero-orbit-note:before{width:20px}
+  .hero.hero-studio .hero-explorer{width:100%}
+  .hero-studio .hero-explorer .sculpture{height:clamp(525px,70svh,690px)}
+}
+@media(min-width:781px) and (max-height:740px){
+  .hero.hero-studio{min-height:740px;padding-top:86px}
+  .hero-studio .hero-explorer .sculpture{height:520px}
+  .hero-studio .hero-copy{top:4%}
+  .hero.hero-studio .hero-copy h1{font-size:34px}
+  .hero-studio .hero-explorer .sculpture-controls{width:530px}
+}
+@media(max-width:780px){
+  .hero.hero-studio{
+    min-height:0;
+    height:auto;
+    padding:80px 4vw 18px;
+    overflow:hidden;
+  }
+  .hero-studio:before{top:48%;width:107vw}
+  .hero-studio .hero-kicker{font-size:7px;line-height:1.6;letter-spacing:.08em}
+  .hero.hero-studio .hero-grid{
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto auto;
+    align-content:start;
+    flex:none;
+    margin:0;
+    gap:0;
+  }
+  .hero-studio .hero-copy{
+    grid-column:1;
+    grid-row:1;
+    position:relative;
+    top:auto;
+    left:auto;
+    width:100%;
+    max-width:none;
+    padding:21px 0 0;
+    text-align:center;
+    justify-self:center;
+  }
+  .hero.hero-studio .hero-copy .eyebrow{margin-bottom:9px;font-size:7px;letter-spacing:.16em}
+  .hero.hero-studio .hero-copy h1{font-size:clamp(27px,7.2vw,40px);line-height:1.4;letter-spacing:-.045em;white-space:nowrap}
+  .hero-studio .hero-copy h1 i{display:inline}
+  .hero.hero-studio .hero-explorer{
+    grid-column:1;
+    grid-row:2;
+    width:100%;
+    max-width:560px;
+    height:auto;
+    min-height:0;
+    margin:8px 0 0;
+    align-self:start;
+    justify-self:center;
+  }
+  .hero-studio .hero-explorer .sculpture{
+    flex:none;
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:330 / 320;
+    overflow:visible;
+  }
+  .hero-studio .hero-explorer .sculpture-svg{inset:0;left:0;width:100%;height:100%;transform:none;overflow:visible}
+  .hero-studio .hero-explorer .sculpture-controls{
+    width:94%;
+    margin:2px auto 0;
+    gap:12px;
+    padding:0;
+  }
+  .hero-studio .sculpture-controls button{min-height:54px;padding:5px 0 7px;column-gap:5px;row-gap:3px}
+  .hero-studio .sculpture-controls button em{font-size:clamp(18px,5.2vw,27px)}
+  .hero-studio .sculpture-controls .stage-number{font-size:7px}
+  .hero-studio .sculpture-controls .stage-name{font-size:8px;letter-spacing:.015em}
+  .hero-studio .hero-orbit-note{width:auto;top:25%;bottom:auto;opacity:.7}
+  .hero-studio .hero-orbit-note>span{font-size:6px;letter-spacing:0}
+  .hero-studio .hero-orbit-note p,.hero-studio .hero-orbit-note:before{display:none}
+  .hero-studio .orbit-left{left:0}
+  .hero-studio .orbit-right{right:0}
+  .hero-studio .hero-interaction-hint{grid-row:3;min-height:32px;margin:6px 0 0;column-gap:3px;font-size:8px;line-height:1.6;letter-spacing:0}
+  .hero-studio .hero-interaction-hint>span{margin-right:2px;font-size:13px}
+  .hero-studio .hero-motion-toggle{padding-left:8px;margin-left:5px;font-size:8px;min-height:32px;letter-spacing:0}
+  .hero.hero-studio .hero-foot{min-height:44px;margin-top:13px;padding-top:11px;column-gap:12px;row-gap:2px}
+  .hero-studio .hero-foot>span{font-size:6px}
+  .hero-studio .hero-foot .text-link{min-height:27px;font-size:11px}
+  .hero-studio .hero-foot .replay-intro{min-height:32px;font-size:8px}
+}
+@media(max-width:360px){
+  .hero.hero-studio .hero-copy h1{font-size:25px}
+  .hero-studio .hero-interaction-hint{font-size:7px}
+  .hero-studio .hero-motion-toggle{font-size:7px;padding-left:7px;margin-left:3px}
+  .hero-studio .sculpture-controls button em{font-size:17px}
+}

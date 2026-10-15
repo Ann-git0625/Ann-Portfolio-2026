@@ -1,0 +1,26 @@
+/* Shared Luma-style tabs, limited to Research's interview feedback.
+   Load after reading-v15.css and research-colors-v17.css. */
+.research-case.editorial-case #research-validation .research-feedback-tabs {
+  border: 0;
+}
+.research-case.editorial-case #research-validation .research-feedback-tabs > .case-tabs {
+  border-color: #c4c9c0;
+}
+.research-case.editorial-case #research-validation .research-feedback-tabs > .case-tabs [role="tab"][aria-selected="true"] {
+  background: #e7e9e2;
+  border-bottom-color: #254136;
+  color: #254136;
+}
+.research-case.editorial-case #research-validation .research-feedback-tabs > .case-tab-panel {
+  background: #f7f4ed;
+  border-color: #c4c9c0 !important;
+}
+.research-case.editorial-case #research-validation .research-feedback-tabs .research-feedback-pair {
+  border: 0;
+  border-top: 1px solid #c4c9c0;
+}
+@media (max-width: 780px) {
+  .research-case.editorial-case #research-validation .research-feedback-tabs > .case-tabs [role="tab"] {
+    flex: 0 0 auto;
+  }
+}

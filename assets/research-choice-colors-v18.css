@@ -1,0 +1,22 @@
+/* Restore the original v15 colors for the four design-choice comparisons only.
+   Source: v15 site.css (--cream, --risk-soft, --pine) and reading-v15.css.
+   Retain the current padding, column gap, and border width; hide the colored bars.
+   The neutral interview-feedback treatment in #research-validation is unchanged. */
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div {
+  color: #192924;
+  border-left-color: transparent;
+}
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div:first-child {
+  background: #efe9da;
+}
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div:last-child {
+  background: #e7ebde;
+}
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div > b {
+  color: #254136;
+}
+.research-case.editorial-case #research-hypothesis .research-feedback-list > article > .risk-phase-heading > span {
+  background: #e0e6d3;
+  border-color: #b8c5a9;
+  color: #40593e;
+}

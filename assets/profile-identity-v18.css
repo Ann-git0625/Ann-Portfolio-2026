@@ -1,0 +1,20 @@
+/* Give the two names a clear reading order, with a ten-percent larger portrait. */
+#about .profile-photo{width:134.2px;height:134.2px;flex-basis:134.2px}
+#about .profile-heading h2{font-size:32px;line-height:1.45;letter-spacing:-.025em}
+#about .profile-heading h2 i{display:inline;font-size:42px;line-height:1.2;margin:0 0 0 .12em}
+#about .profile-heading .profile-fullname{display:block;font:400 22px/1.5 var(--sans);letter-spacing:.12em;margin:10px 0 0;color:#40513d}
+@media(max-width:1150px){
+ #about .profile-heading h2{font-size:29px}
+ #about .profile-heading h2 i{font-size:39px}
+}
+@media(max-width:520px){
+ #about .profile-heading{gap:20px}
+ #about .profile-photo{width:111.1px;height:111.1px;flex-basis:111.1px}
+ #about .profile-heading h2{font-size:25px;line-height:1.35}
+ #about .profile-heading h2 i{display:block;font-size:39px;margin:3px 0 0}
+ #about .profile-heading .profile-fullname{font-size:18px;margin-top:7px;letter-spacing:.1em}
+}
+@media(max-width:360px){
+ #about .profile-heading{gap:16px}
+ #about .profile-heading h2{font-size:23px}
+}

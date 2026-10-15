@@ -1,0 +1,11 @@
+/* v20: both design-choice columns have a visible, restrained surface.
+   Load after research-choice-colors-v18.css. The interview tabs are untouched. */
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div:first-child {
+  background: #efe9da;
+  box-shadow: inset 0 0 0 1px #d8ceba;
+}
+
+.research-case.editorial-case #research-hypothesis .research-feedback-pair > div:last-child {
+  background: #dce7e5;
+  box-shadow: inset 0 0 0 1px #b9ceca;
+}

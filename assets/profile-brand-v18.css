@@ -1,0 +1,55 @@
+/* Subdued product colors are confined to the software icons in About.
+   All icon sizes, labels, spacing, and capability-card layout remain inherited. */
+#about .capability-software [data-software="Figma"] {
+  --software-ink: #665e60;
+  --software-surface: #f4f0eb;
+  --software-rule: #d8cec2;
+}
+#about .capability-software [data-software="Photoshop"] {
+  --software-ink: #396b95;
+  --software-surface: #e8eff5;
+  --software-rule: #bfd0df;
+}
+#about .capability-software [data-software="Illustrator"] {
+  --software-ink: #98601e;
+  --software-surface: #f7ecd9;
+  --software-rule: #dfc8a2;
+}
+#about .capability-software [data-software="Premiere"] {
+  --software-ink: #71538f;
+  --software-surface: #eee9f4;
+  --software-rule: #cfc2df;
+}
+#about .capability-software [data-software="Unreal Engine 5"] {
+  --software-ink: #414747;
+  --software-surface: #ececeb;
+  --software-rule: #c7cac6;
+}
+#about .capability-software [data-software="3ds Max"] {
+  --software-ink: #397a83;
+  --software-surface: #e5eff0;
+  --software-rule: #b9d0d2;
+}
+#about .capability-software [data-software="Blender"] {
+  --software-ink: #b27432;
+  --software-surface: #f7ecdf;
+  --software-rule: #e0c7ab;
+}
+#about .capability-software [data-software="Git"] {
+  --software-ink: #ad6651;
+  --software-surface: #f5e8e3;
+  --software-rule: #dfc0b5;
+}
+#about .capability-software [data-software="AI"] {
+  --software-ink: #837098;
+  --software-surface: #eeeaf3;
+  --software-rule: #cfc5dd;
+}
+#about .capability-software [data-software] .software-symbol {
+  color: var(--software-ink);
+  background: var(--software-surface);
+  border-color: var(--software-rule);
+}
+#about .capability-software .software-brand-icon {
+  filter: none;
+}

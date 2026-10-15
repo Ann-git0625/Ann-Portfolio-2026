@@ -1,0 +1,52 @@
+/* Requested warm surfaces; product screenshots and brand swatches stay intact. */
+.editorial-case #hz-system {
+  --ds-surface:#efe9da;
+  --ds-card:#fbfaf6;
+  --ds-subtle:#e8e1d2;
+  --ds-ink:#263b32;
+  --ds-body:#506050;
+  --ds-muted:#65705e;
+  --ds-rule:#d1c9b8;
+  --ds-accent:#776742;
+}
+.editorial-case #hz-system .hz-layout-blueprint {
+  background-image:radial-gradient(#9c947e4d .6px,transparent .6px);
+  border-color:#cec5b2;
+}
+.editorial-case #hz-system .hz-layout-blueprint>span,
+.editorial-case #hz-system .hz-layout-blueprint>i {
+  border-color:#cec5b2;
+  background:#fbfaf6ad;
+}
+.editorial-case #hz-system .hz-state-demo button:focus-visible,
+.editorial-case #hz-system .hz-evidence summary:focus-visible {outline-color:#6b704f}
+
+/* Risk: only the two original spreadsheet artifact frames. */
+.editorial-case[data-case-key="risk"] #risk-rules .risk-main-artifact,
+.editorial-case[data-case-key="risk"] #risk-rules .risk-query-layout>figure {
+  background:#e9eee2;
+  color:#254136;
+  border-color:#c4cebb;
+}
+.editorial-case[data-case-key="risk"] #risk-rules .risk-main-artifact figcaption,
+.editorial-case[data-case-key="risk"] #risk-rules .risk-query-layout>figure figcaption,
+.editorial-case[data-case-key="risk"] #risk-rules .risk-main-artifact figcaption span,
+.editorial-case[data-case-key="risk"] #risk-rules .risk-query-layout>figure figcaption span {color:#53634e}
+.editorial-case[data-case-key="risk"] #risk-rules .risk-main-artifact figcaption b,
+.editorial-case[data-case-key="risk"] #risk-rules .risk-query-layout>figure figcaption b {color:#254136}
+
+/* Research: a shared beige surface with no frame on either comparison column. */
+.research-case.editorial-case #research-hypothesis .research-feedback-pair>div:first-child,
+.research-case.editorial-case #research-hypothesis .research-feedback-pair>div:last-child {
+  background:#efe9da;
+  border:0;
+  box-shadow:none;
+}
+
+/* Balance the longer closing message without forcing narrow-screen overflow. */
+.portfolio-feedback .feedback-heading h2 {
+  max-width:26em;
+  font-size:clamp(26px,3vw,42px);
+  line-height:1.55;
+  text-wrap:balance;
+}

@@ -1,0 +1,20 @@
+/* One bright, softened coral red for the five main home-page section labels.
+   Shared with whole-card hover and keyboard-focus reading links.
+   Hero labels, project numbers, tags, and case interiors are excluded. */
+:root { --section-label-red: #d13d3a; }
+#about .profile-heading > div > .section-index,
+#work > .folio-collection-heading > .collection-heading-kicker,
+#research-work > .folio-collection-heading > .collection-heading-kicker,
+#visual > .folio-collection-heading > .collection-heading-kicker,
+#feedback .feedback-heading > .section-index {
+  color: var(--section-label-red);
+}
+
+#work .project-open .card-arrow,
+#research-work .project-open .card-arrow { transition: color .18s ease; }
+#work .project-open:is(:hover,:focus-visible) .card-arrow,
+#work .project-open:is(:hover,:focus-visible) .card-arrow>span,
+#research-work .project-open:is(:hover,:focus-visible) .card-arrow,
+#research-work .project-open:is(:hover,:focus-visible) .card-arrow>span {
+  color: var(--section-label-red) !important;
+}

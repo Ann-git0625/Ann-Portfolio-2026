@@ -1,0 +1,45 @@
+/* The research interview comparisons use one neutral surface.
+   Scope to validation only; hypotheses and every other case keep their styling. */
+.research-case.editorial-case #research-validation .research-feedback-list {
+  border-color: #254136;
+}
+.research-case.editorial-case #research-validation .research-feedback-list > article {
+  border-color: #c4c9c0;
+}
+.research-case.editorial-case #research-validation .research-feedback-pair {
+  gap: 0;
+  background: #f7f4ed;
+  border: 1px solid #c4c9c0;
+}
+.research-case.editorial-case #research-validation .research-feedback-pair > div {
+  background: transparent;
+  border: 0;
+  color: #254136;
+  padding: 22px 24px;
+}
+.research-case.editorial-case #research-validation .research-feedback-pair > div + div {
+  border-left: 1px solid #c4c9c0;
+}
+.research-case.editorial-case #research-validation .research-feedback-pair > div > b {
+  display: block;
+  color: #254136;
+  border-bottom: 1px solid #d7dad2;
+  padding-bottom: 10px;
+}
+.research-case.editorial-case #research-validation .research-feedback-pair > div > p {
+  color: #254136;
+}
+.research-case.editorial-case #research-validation .research-feedback-list > article > .risk-phase-heading > span {
+  background: #f7f4ed;
+  border-color: #aeb8ac;
+  color: #254136;
+}
+@media (max-width: 780px) {
+  .research-case.editorial-case #research-validation .research-feedback-pair > div {
+    padding: 18px 20px;
+  }
+  .research-case.editorial-case #research-validation .research-feedback-pair > div + div {
+    border-left: 0;
+    border-top: 1px solid #c4c9c0;
+  }
+}
