@@ -1,0 +1,123 @@
+/* v10.04 — requested home-page typography and spacing refinements. */
+
+/* Let each stage caption occupy one complete line at its existing text size. */
+.hero-studio .hero-orbit-note.orbit-right {
+  width: max-content;
+  max-width: 100%;
+}
+.hero-studio .orbit-right .hero-stage-copy {
+  white-space: nowrap;
+}
+
+/* Keep the inherited 17px / mobile 16px lead; add a soft marker instead. */
+#about .profile-intro .profile-lead mark {
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  padding: 0 .12em .08em;
+  background: linear-gradient(transparent 56%, #ffc40038 56%, #ffc40038 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#about .profile-lead .profile-role {
+  white-space: nowrap;
+}
+
+/* Education shares the career-list markup and its type scale/date columns. */
+#about .education-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#about .education-list li p {
+  margin: 4px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+#about .capability-software [data-software="InDesign"] {
+  --software-ink: #a04465;
+  --software-surface: #f7e7ed;
+  --software-rule: #dfbdcb;
+}
+
+/* Keep the archive cover, caption and toggle at the same size in both states. */
+#visual {
+  --archive-cover-height: clamp(210px, 26vw, 380px);
+  --archive-label-bottom: 27px;
+  --archive-label-size: 17px;
+  --archive-toggle-bottom: 29px;
+  --archive-toggle-size: 44px;
+}
+#visual .visual-disclosure > .visual-disclosure-summary {
+  height: var(--archive-cover-height);
+  border-radius: 9px;
+}
+#visual .visual-disclosure .visual-disclosure-copy {
+  bottom: var(--archive-label-bottom);
+  font-size: var(--archive-label-size);
+}
+#visual .visual-disclosure .visual-disclosure-icon {
+  bottom: var(--archive-toggle-bottom);
+  width: var(--archive-toggle-size);
+  height: var(--archive-toggle-size);
+}
+
+/* v10.05: one continuous desktop heading with the same type size throughout. */
+.portfolio-feedback .feedback-heading h2 {
+  margin-bottom: 12px;
+  max-width: none;
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.55;
+  white-space: nowrap;
+  text-wrap: normal;
+}
+
+/* Halve the image-to-next-card text area without compressing project images. */
+.collection .collection-grid {
+  row-gap: 24px;
+}
+.collection .project-open {
+  row-gap: 8px;
+}
+.collection .card-copy h3 {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.collection .card-copy p {
+  margin: 0;
+  line-height: 1.8;
+}
+.collection .card-arrow {
+  min-height: 26px;
+  margin: 0;
+  padding: 4px 0 0;
+  align-items: center;
+  font-size: 21px;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  #visual { --archive-cover-height: 260px; }
+}
+@media (max-width: 780px) {
+  .portfolio-feedback .feedback-heading h2 {
+    font-size: clamp(26px, 5.8vw, 40px);
+    white-space: normal;
+    text-wrap: pretty;
+  }
+  .collection .collection-grid { row-gap: 28px; }
+  .collection .project-open { row-gap: 10px; }
+  .collection .card-arrow { min-height: 36px; }
+}
+@media (max-width: 520px) {
+  #visual {
+    --archive-cover-height: 215px;
+    --archive-label-bottom: 21px;
+    --archive-label-size: 15px;
+    --archive-toggle-bottom: 23px;
+    --archive-toggle-size: 37px;
+  }
+}
