@@ -1,0 +1,21 @@
+/* Quiet green and orange washes beside the closing message. Backgrounds
+   keep the form and its focus targets unobstructed. */
+#feedback.portfolio-feedback {
+  background-image:
+    radial-gradient(ellipse 340px 180px at 88% 100px,
+      rgb(123 148 96 / 29%) 0%, rgb(123 148 96 / 12%) 45%, transparent 100%),
+    radial-gradient(ellipse 270px 150px at 99% 205px,
+      rgb(185 98 71 / 23%) 0%, rgb(185 98 71 / 9%) 48%, transparent 100%),
+    radial-gradient(ellipse 240px 130px at 76% 210px,
+      rgb(123 148 96 / 10%) 0%, transparent 100%);
+  background-repeat: no-repeat;
+}
+@media (max-width: 850px) {
+  #feedback.portfolio-feedback {
+    background-image:
+      radial-gradient(ellipse 220px 200px at 105% 105px,
+        rgb(123 148 96 / 24%) 0%, rgb(123 148 96 / 9%) 45%, transparent 100%),
+      radial-gradient(ellipse 180px 150px at 100% 255px,
+        rgb(185 98 71 / 17%) 0%, rgb(185 98 71 / 6%) 48%, transparent 100%);
+  }
+}

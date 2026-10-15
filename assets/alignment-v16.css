@@ -1,0 +1,52 @@
+/* v16: one reading column for the narrative in all eight case studies.
+   Load after reading-v15.css and the other v16 case styles.
+   Only section-level copy is constrained: figures, tables, cards, tab panels,
+   design-system specimens and cover compositions keep their existing width. */
+
+.editorial-case {
+  --case-copy-width: 880px;
+  --case-content-gutter: 6%;
+}
+
+/* Keep every chapter on the same content rail. Subsection separators span
+   that rail; they do not shrink to the shorter narrative column. */
+.editorial-case > :is(.editorial-chapter, .hz-section, .hz-system-section) {
+  padding-inline: var(--case-content-gutter) !important;
+}
+
+.editorial-case > .editorial-chapter > .editorial-subsection {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+}
+
+/* The opening paragraph lives inside its section heading, whereas subsequent
+   paragraphs are siblings of the heading. Give both structures the same
+   measure, replacing the inherited 70ch / 960px mismatch. */
+.editorial-case .editorial-subsection > .risk-section-heading,
+.editorial-case > :is(.hz-section, .hz-system-section) > .hz-section-head {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--case-copy-width) !important;
+  margin-inline: 0 !important;
+}
+
+.editorial-case .editorial-subsection > .risk-section-heading > :is(h3, p),
+.editorial-case > :is(.hz-section, .hz-system-section) > .hz-section-head > :is(h3, p),
+.editorial-case .editorial-subsection > :is(p.risk-section-intro, p.you-feature-copy, p:not([class])) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--case-copy-width) !important;
+  margin-inline: 0 !important;
+}
+
+/* The same rail remains fluid at narrow widths; no fixed minimum can force
+   the narrative, or a long heading, beyond the available mobile width. */
+@media (max-width: 780px) {
+  .editorial-case {
+    --case-content-gutter: 5%;
+    --case-copy-width: 100%;
+  }
+}

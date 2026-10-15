@@ -1,0 +1,71 @@
+/* v16 — light documentation surfaces restore contrast in Hanazono's design system.
+   Only presentation colors, borders and focus outlines change here.
+   Original images, brand swatches, component sample fills and floor states stay intact. */
+.editorial-case #hz-system{
+  --ds-surface:#edf2f5;
+  --ds-card:#fbfcfd;
+  --ds-subtle:#e5edf2;
+  --ds-ink:#233b4b;
+  --ds-body:#455e6e;
+  --ds-muted:#526b7b;
+  --ds-rule:#cbd6df;
+  --ds-accent:#486b81;
+  background:var(--ds-surface);
+  color:var(--ds-ink);
+  border-color:var(--ds-rule)!important;
+}
+.editorial-case #hz-system>.hz-section-head :is(h2,h3){color:var(--ds-ink)!important}
+.editorial-case #hz-system>.hz-section-head>.hz-kicker{color:var(--ds-accent)!important}
+.editorial-case #hz-system>.hz-section-head>p{color:var(--ds-body)!important}
+.editorial-case #hz-system .hz-ds-block{background:var(--ds-card);border-color:var(--ds-rule);color:var(--ds-ink)}
+.editorial-case #hz-system .hz-ds-block>header{border-color:var(--ds-rule)}
+.editorial-case #hz-system .hz-ds-block>header>span{color:var(--ds-accent)}
+.editorial-case #hz-system .hz-ds-block>header>h4{color:var(--ds-ink)!important}
+.editorial-case #hz-system .hz-ds-principles p{color:var(--ds-body)}
+.editorial-case #hz-system .hz-ds-principles b{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-ds-note{color:var(--ds-muted)}
+
+/* The three existing brand color swatches themselves are deliberately untouched. */
+.editorial-case #hz-system .hz-color-swatches b{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-color-swatches :is(code,span){color:var(--ds-muted)}
+.editorial-case #hz-system .hz-type-row{border-color:var(--ds-rule)}
+.editorial-case #hz-system .hz-type-row>b,
+.editorial-case #hz-system .hz-type-row strong{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-type-row span{color:var(--ds-muted)}
+.editorial-case #hz-system .hz-layout-blueprint{
+  background-color:var(--ds-subtle);
+  background-image:radial-gradient(#7d97a54d .6px,transparent .6px);
+  border-color:#b7c8d2;
+}
+.editorial-case #hz-system .hz-layout-blueprint>span,
+.editorial-case #hz-system .hz-layout-blueprint>i{color:var(--ds-body);border-color:#b7c8d2;background:#fbfcfdad}
+.editorial-case #hz-system .hz-layout-blueprint>b{color:var(--ds-accent)}
+.editorial-case #hz-system .hz-space-tokens b{color:var(--ds-accent)}
+.editorial-case #hz-system .hz-space-tokens span{color:var(--ds-muted)}
+
+/* Component specimens retain their original gray-blue, gold and white colors. */
+.editorial-case #hz-system .hz-rule-list li{color:var(--ds-body)}
+.editorial-case #hz-system .hz-rule-list b{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-state-row small{color:var(--ds-muted)}
+.editorial-case #hz-system .hz-state-demo{border-color:var(--ds-rule)}
+.editorial-case #hz-system .hz-state-demo label{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-state-demo label small{color:var(--ds-muted)}
+.editorial-case #hz-system .hz-floor-result{color:var(--ds-body)}
+.editorial-case #hz-system .hz-state-demo button:focus-visible{outline-color:#315f7a}
+.editorial-case #hz-system .hz-evidence{border-color:var(--ds-rule)}
+.editorial-case #hz-system .hz-evidence summary{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-evidence summary:focus-visible{outline-color:#315f7a}
+.editorial-case #hz-system .hz-source-figure{color:var(--ds-ink)}
+.editorial-case #hz-system .hz-source-figure figcaption{color:var(--ds-muted)}
+
+/* Related legacy dark frames had inherited dark captions from the shared reading scale. */
+.editorial-case .risk-main-artifact,
+.editorial-case .risk-query-layout>figure,
+.editorial-case .case-video{background:#f3f6f8;color:#233b4b;border-color:#cbd6df}
+.editorial-case .risk-main-artifact figcaption,
+.editorial-case .risk-query-layout>figure figcaption,
+.editorial-case .case-video>span{color:#455e6e}
+.editorial-case .risk-main-artifact figcaption b,
+.editorial-case .risk-query-layout>figure figcaption b{color:#233b4b}
+.editorial-case .risk-main-artifact figcaption span,
+.editorial-case .risk-query-layout>figure figcaption span{color:#526b7b}

@@ -1,0 +1,67 @@
+/* v16: neutral case covers. Home-page previews inherit the v15 palette.
+   Load after covers-v15.css / reading-v15.css. Artwork is never recolored. */
+
+/* All eight case covers lose the separate colored display board. */
+.editorial-case .commercial-hero {
+  background: #f7f4ed;
+}
+.editorial-case .commercial-hero .commercial-showcase .showcase-stage {
+  background: transparent;
+  border-radius: 0;
+}
+.editorial-case .commercial-hero .commercial-showcase figcaption {
+  color: #5c625e;
+}
+
+/* Removing the former image buttons leaves images directly in device frames.
+   This includes the Graph monitor panel, which otherwise keeps its HTML height
+   while max-width shrinks its width. All covers use the original aspect ratio. */
+.editorial-case .commercial-hero .commercial-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  margin: 0;
+  transform: none;
+}
+
+/* Hanazono retains its real screen; only the laptop shell becomes neutral. */
+.showcase-hanazono .showcase-laptop-lid {
+  border-color: #6f7476;
+  border-top-color: #999fa2;
+  background: linear-gradient(145deg, #3d4244, #171b1d 25%, #101416 76%, #50575b);
+  box-shadow: 0 22px 36px #22272a30, 0 2px 0 #eef0f236 inset;
+}
+.showcase-hanazono .showcase-camera {
+  background: #0e1214;
+  box-shadow: 0 0 0 1px #72797d;
+}
+.showcase-hanazono .showcase-laptop-base {
+  background: linear-gradient(#d5d8da 0%, #afb4b7 19%, #edf0f2 23%, #9da3a7 45%, #656c71 100%);
+  box-shadow: 0 12px 15px #22272a38, 0 1px 0 #f1f3f5 inset;
+}
+.showcase-hanazono .showcase-laptop-base > i {
+  background: #989fa3;
+  box-shadow: 0 -1px 0 #626b71 inset;
+}
+
+/* Document-cover labels sit directly on the neutral cover, without a board. */
+.showcase-learning .showcase-document-intro > span {
+  color: #984b35;
+}
+.showcase-learning .showcase-document-intro > b,
+.showcase-learning .showcase-document-intro > p {
+  color: #5c4439;
+}
+.showcase-knowledge .showcase-knowledge-label > span,
+.showcase-knowledge .showcase-knowledge-label > p {
+  color: #466474;
+}
+.showcase-knowledge .showcase-knowledge-label > b {
+  color: #304f61;
+}
