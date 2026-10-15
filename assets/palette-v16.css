@@ -1,0 +1,13 @@
+/* Four hues, each with a clear role: forest, ochre, terracotta and mist blue. */
+:root{--clay:#b96247;--clay-ink:#984b35;--clay-paper:#f0e2d8;--mist:#7895a7;--mist-ink:#466474;--mist-paper:#e4ecee}
+/* Home-page sections inherit the original v15 palette. */
+.editorial-case .research-feedback-pair>div:first-child{background:#f0dfd0;border-left:3px solid #b96247;color:#3e3028}
+.editorial-case .research-feedback-pair>div:last-child{background:#d9e7ee;border-left:3px solid #6c8fa3;color:#203d4b}
+.editorial-case .research-feedback-pair>div{padding:22px 24px}
+.editorial-case .research-feedback-pair>div:first-child>b{color:#81412f}
+.editorial-case .research-feedback-pair>div:last-child>b{color:#345e74}
+/* Case headings use upright type, including emphasized phrases. */
+.editorial-case :is(h1,h2,h3,h4,h5,h6),.editorial-case :is(h1,h2,h3,h4,h5,h6) :is(em,i){font-style:normal!important}
+/* Short cover line stays intact without allowing a lone final character. */
+.editorial-case .commercial-hero-hanazono .hz-hero-title h2>span{font:400 clamp(15px,1.7vw,23px)/1.8 var(--serif)!important;letter-spacing:0!important;white-space:nowrap;word-break:keep-all}
+@media(max-width:899px){.editorial-case .commercial-hero-hanazono .hz-hero-title h2>span{font-size:clamp(13px,3.7vw,20px)!important}}

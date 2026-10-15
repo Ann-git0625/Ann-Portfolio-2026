@@ -1,0 +1,14 @@
+/* Learning: the design rationale now accompanies each of the five actions. */
+.learning-case .learning-flow-integrated .learning-stage-action {
+  margin-top: 0;
+}
+.editorial-case.learning-case .learning-flow-integrated .learning-stage-reason {
+  margin: 14px 0 0;
+  color: #536354;
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+}
+@media(max-width:780px){
+ .learning-flow-integrated .learning-stage-flow{min-width:1160px}
+ .editorial-case .learning-flow-integrated .learning-stage-flow h4{min-height:0;margin-bottom:18px}
+}

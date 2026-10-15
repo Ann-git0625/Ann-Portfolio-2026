@@ -1,0 +1,50 @@
+/* v20: visible but quiet green and orange mist within the edges of About.
+   These are background layers only: the original cream stays underneath,
+   the center stays clear, and no layer sits over text or interactive content. */
+#about.profile-v17 {
+  --about-glow-width: clamp(260px, 27vw, 480px);
+  --about-glow-height: clamp(320px, 32vw, 480px);
+  --about-glow-accent-width: clamp(170px, 19vw, 340px);
+  --about-green-soft: rgb(123 148 96 / 34%);
+  --about-green-fade: rgb(123 148 96 / 16%);
+  --about-orange-soft: rgb(185 98 71 / 29%);
+  --about-orange-fade: rgb(185 98 71 / 13%);
+  background-color: var(--paper, #f6f2e9);
+  background-image:
+    radial-gradient(ellipse var(--about-glow-width) var(--about-glow-height) at 0% 20%,
+      var(--about-green-soft) 0%, var(--about-green-fade) 40%, transparent 88%),
+    radial-gradient(ellipse var(--about-glow-accent-width) 310px at 1% 55%,
+      var(--about-orange-fade) 0%, transparent 88%),
+    radial-gradient(ellipse var(--about-glow-accent-width) 320px at 3% 86%,
+      var(--about-green-fade) 0%, transparent 90%),
+    radial-gradient(ellipse var(--about-glow-width) var(--about-glow-height) at 100% 31%,
+      var(--about-orange-soft) 0%, var(--about-orange-fade) 43%, transparent 90%),
+    radial-gradient(ellipse var(--about-glow-width) 350px at 103% 67%,
+      var(--about-green-soft) 0%, var(--about-green-fade) 30%, transparent 88%),
+    radial-gradient(ellipse var(--about-glow-accent-width) 300px at 99% 91%,
+      var(--about-orange-fade) 0%, transparent 90%);
+  background-repeat: no-repeat;
+}
+@media (max-width: 850px) {
+  #about.profile-v17 {
+    --about-glow-width: clamp(170px, 25vw, 230px);
+    --about-glow-height: 350px;
+    --about-glow-accent-width: 140px;
+    --about-green-soft: rgb(123 148 96 / 26%);
+    --about-green-fade: rgb(123 148 96 / 11%);
+    --about-orange-soft: rgb(185 98 71 / 23%);
+    --about-orange-fade: rgb(185 98 71 / 10%);
+  }
+}
+@media (max-width: 520px) {
+  #about.profile-v17 {
+    --about-glow-width: 170px;
+    --about-glow-height: 380px;
+    --about-glow-accent-width: 128px;
+    --about-green-soft: rgb(123 148 96 / 23%);
+    --about-green-fade: rgb(123 148 96 / 10%);
+    --about-orange-soft: rgb(185 98 71 / 20%);
+    --about-orange-fade: rgb(185 98 71 / 9%);
+  }
+}
+#about .profile-introduction{border-bottom:0}

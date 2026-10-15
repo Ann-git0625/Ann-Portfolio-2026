@@ -1,0 +1,141 @@
+/* Graph cover only: a thin graphite display and machined aluminium stand.
+   Keep the original screen at its natural ratio; no perspective or image crop.
+   Load after covers-v15.css and case-palette-v16.css. */
+.commercial-hero-graph .showcase-stage {
+  padding: 28px 20px 16px;
+}
+
+.commercial-hero-graph .showcase-monitor {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  width: 96%;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+/* This shadow belongs to the stand's contact with the desk, not the screen. */
+.commercial-hero-graph .showcase-monitor::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 25%;
+  right: 25%;
+  bottom: -7px;
+  height: clamp(8px, 1.8cqw, 15px);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #22242730 0%, #2224270c 48%, transparent 72%);
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+.commercial-hero-graph .showcase-monitor-panel {
+  position: relative;
+  z-index: 2;
+  padding: clamp(4px, 1cqw, 8px);
+  padding-bottom: clamp(8px, 2.2cqw, 17px);
+  border: 1px solid #17191b;
+  border-top-color: #85898d;
+  border-inline-color: #44484c;
+  border-bottom-color: #0b0d0f;
+  border-radius: clamp(5px, 1.1cqw, 9px);
+  background: linear-gradient(145deg, #34383b 0%, #16191c 17%, #15171a 80%, #282c30 100%);
+  box-shadow:
+    0 1px 0 #c5c8cb73 inset,
+    1px 0 0 #9b9fa32e inset,
+    -1px 0 0 #080a0b8c inset,
+    0 -2px 0 #080a0ba6 inset,
+    0 2px 2px #171b1e26,
+    0 13px 27px -17px #161b204d;
+}
+
+/* A restrained power LED in the lower bezel provides a familiar scale cue. */
+.commercial-hero-graph .showcase-monitor-panel::after {
+  content: "";
+  position: absolute;
+  right: 2.8%;
+  bottom: clamp(3px, .9cqw, 7px);
+  width: clamp(1px, .35cqw, 2px);
+  height: clamp(1px, .35cqw, 2px);
+  border-radius: 50%;
+  background: #cbd9df;
+  box-shadow: 0 0 2px #cbd9df4d;
+  pointer-events: none;
+}
+
+.commercial-hero-graph .commercial-showcase .showcase-monitor-panel > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 0;
+  border-radius: 1px;
+  transform: none;
+  outline: 1px solid #050709;
+  box-shadow: 0 0 0 2px #40454a26;
+}
+
+/* A straight, narrow extrusion replaces the broad plastic trapezoid. */
+.commercial-hero-graph .showcase-monitor-stem {
+  position: relative;
+  z-index: 1;
+  width: 7.2%;
+  height: clamp(25px, 8.2cqw, 64px);
+  margin: -1px auto -2px;
+  clip-path: none;
+  border: 1px solid #8b9095;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0 0 2px 2px;
+  background: linear-gradient(90deg,
+    #7c8288 0%, #c8cdd1 7%, #adb3b8 16%,
+    #d3d7db 45%, #bfc4c9 76%, #8c9399 97%, #676e74 100%);
+  box-shadow: 1px 0 0 #f3f5f78c inset, -1px 0 0 #52585e40 inset;
+}
+
+.commercial-hero-graph .showcase-monitor-stem::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 35%;
+  background: linear-gradient(#10141842, transparent);
+  pointer-events: none;
+}
+
+/* The foreshortened top and thin front edge read as a solid metal plate. */
+.commercial-hero-graph .showcase-monitor-foot {
+  position: relative;
+  z-index: 2;
+  width: 28%;
+  height: clamp(12px, 3.2cqw, 25px);
+  margin: 0 auto;
+  border: 1px solid #969da3;
+  border-top-color: #d7dce0;
+  border-bottom: 2px solid #747d84;
+  border-radius: 45% 45% 4px 4px / 22% 22% 3px 3px;
+  background: linear-gradient(180deg, #b7bec4 0%, #d9dde0 30%, #c2c8cd 84%, #a1a9b0 86%, #8e979e 100%);
+  box-shadow: 0 1px 0 #f4f6f8bf inset, 0 3px 3px #1921271c;
+}
+
+.commercial-hero-graph .showcase-monitor-foot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 37%;
+  width: 26%;
+  height: 38%;
+  border-radius: 50%;
+  background: linear-gradient(#535d6429, transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 780px) {
+  .commercial-hero-graph .showcase-stage {
+    padding: 20px 2px 12px;
+  }
+  .commercial-hero-graph .showcase-monitor {
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+/* Original document artwork, presented as a small printed publication set.
+   Covers only: no changes to the document previews within either case. */
+.commercial-hero-learning .commercial-showcase .showcase-stage,
+.commercial-hero-knowledge .commercial-showcase .showcase-stage {
+  padding: 20px 10px 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+.commercial-hero-learning .showcase-document-deck,
+.commercial-hero-knowledge .showcase-knowledge-deck {
+  display: block;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0;
+  perspective: 1800px;
+}
+.commercial-hero-learning .showcase-paper-spread,
+.commercial-hero-knowledge .showcase-knowledge-deck {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.65;
+  margin: 0;
+  padding: 0;
+  isolation: isolate;
+}
+.commercial-hero-learning .showcase-paper-spread::after,
+.commercial-hero-knowledge .showcase-knowledge-deck::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 82%;
+  height: 12%;
+  left: 9%;
+  bottom: 4%;
+  background: radial-gradient(ellipse, #34302a18, #34302a00 72%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+.commercial-hero-learning .showcase-document,
+.commercial-hero-knowledge .showcase-document {
+  position: absolute;
+  display: block;
+  min-width: 0;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d5d0c8;
+  border-radius: 1px;
+  background: #fff;
+  overflow: visible;
+  transform-origin: center;
+}
+.commercial-hero-learning .showcase-document::before,
+.commercial-hero-knowledge .showcase-document::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 2px -3px -5px 2px;
+  border: 1px solid #d4d0c8;
+  border-radius: 1px;
+  background: repeating-linear-gradient(0deg, #e4e0d7 0 1px, #f9f7f1 1px 2px);
+  pointer-events: none;
+}
+.commercial-hero-learning .showcase-paper-primary {
+  z-index: 2;
+  width: 53%;
+  left: 3%;
+  top: 18%;
+  transform: rotate(-5deg);
+  box-shadow: 1px 2px 2px #302b2024, 7px 14px 16px #302b201c, 13px 29px 36px #302b201a;
+}
+.commercial-hero-learning .showcase-paper-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 8px;
+  background: linear-gradient(90deg, #77726921, #fff0);
+  pointer-events: none;
+}
+.commercial-hero-learning .showcase-paper-secondary {
+  z-index: 1;
+  width: 39%;
+  right: 1%;
+  top: 6%;
+  transform: rotate(5deg);
+  box-shadow: 0 1px 2px #302b2026, 4px 11px 15px #302b2018, 8px 23px 32px #302b2014;
+}
+.commercial-hero-knowledge .showcase-knowledge-map {
+  z-index: 2;
+  width: 71%;
+  left: 2%;
+  top: 22%;
+  padding: 8px;
+  transform: rotate(-4deg);
+  box-shadow: 1px 2px 2px #302b2024, 5px 12px 16px #302b201c, 10px 27px 34px #302b2018;
+}
+.commercial-hero-knowledge .showcase-knowledge-index {
+  z-index: 1;
+  width: 23%;
+  right: 1%;
+  top: 4%;
+  transform: rotate(5deg);
+  box-shadow: 0 1px 2px #302b2026, 4px 11px 15px #302b2018, 8px 23px 32px #302b2014;
+}
+.commercial-hero-learning .showcase-document > img,
+.commercial-hero-knowledge .showcase-document > img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+  transform: none;
+  box-shadow: none;
+}
+.commercial-hero-learning .commercial-showcase figcaption,
+.commercial-hero-knowledge .commercial-showcase figcaption {
+  padding-top: 12px;
+}
+@media (max-width: 780px) {
+  .commercial-hero-learning .commercial-showcase .showcase-stage,
+  .commercial-hero-knowledge .commercial-showcase .showcase-stage {
+    padding: 14px 5px 5px;
+  }
+  .commercial-hero-learning .showcase-paper-spread,
+  .commercial-hero-knowledge .showcase-knowledge-deck {
+    aspect-ratio: 1.6;
+  }
+  .commercial-hero-learning .showcase-paper-primary {
+    left: 2%;
+    top: 18%;
+    width: 54%;
+    transform: rotate(-4deg);
+  }
+  .commercial-hero-learning .showcase-paper-secondary {
+    top: 8%;
+    transform: rotate(4deg);
+  }
+  .commercial-hero-knowledge .showcase-knowledge-map {
+    top: 24%;
+    padding: 4px;
+    transform: rotate(-3deg);
+  }
+  .commercial-hero-knowledge .showcase-knowledge-index {
+    top: 7%;
+    transform: rotate(4deg);
+  }
+  .commercial-hero-learning .showcase-document::before,
+  .commercial-hero-knowledge .showcase-document::before {
+    inset: 2px -2px -3px 2px;
+  }
+}
