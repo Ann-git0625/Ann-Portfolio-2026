@@ -1,0 +1,73 @@
+/* One warm yellow for the home page and its opening sequence.
+   Keep the project dialog outside this scope: product artwork and case palettes
+   retain their original colors. Existing alpha values supply the tonal depth. */
+body > .site-header,
+body > main,
+body > footer,
+.skip-link,
+.hero.hero-studio,
+.hero-intro-art,
+.hero-intro-caption,
+.hero-intro-identity,
+.intro-skip{
+  --yellow:#FFC400;
+  --hero-yellow:#FFC400;
+}
+.hero-studio .sculpture-controls button::before{
+  background:var(--hero-yellow);
+}
+.hero-studio .sculpture-controls button[aria-pressed="true"],
+.hero-studio .sculpture-controls button:hover,
+.hero-studio .hero-interaction-hint > span,
+.hero-studio .hero-foot .text-link > span,
+.hero-studio .hero-foot .replay-intro > span,
+.hero-studio .hero-foot .replay-intro:hover,
+.hero-studio .hero-motion-toggle:hover{
+  color:var(--hero-yellow);
+}
+.hero-studio .sculpture:focus-visible,
+.hero-studio .sculpture-controls button:focus-visible,
+.hero-studio .hero-motion-toggle:focus-visible,
+.hero-studio .hero-foot .replay-intro:focus-visible,
+.hero-studio .hero-foot .text-link:focus-visible{
+  outline-color:var(--hero-yellow);
+}
+.hero-studio #node-glow stop,
+.hero-intro-art #node-glow stop{
+  stop-color:var(--hero-yellow);
+}
+.hero-intro-art::before{
+  background:radial-gradient(ellipse at 60% 40%,#FFC40012,transparent 62%);
+}
+.hero-intro-caption::after{
+  background:linear-gradient(90deg,#FFC40055,var(--hero-yellow));
+  box-shadow:0 0 16px #FFC40055;
+}
+.intro-skip:hover{
+  background:var(--hero-yellow);
+}
+.intro-skip:focus-visible{
+  outline-color:var(--hero-yellow);
+}
+body > .site-header ::selection,
+body > main ::selection,
+body > footer ::selection{
+  background:var(--hero-yellow);
+  color:#192924;
+}
+
+/* Case reading accents only: progress, chapter labels and navigation rules.
+   The v22 facts, detail numbers, tabs, product specimens and focus colors stay
+   in their original styles. Do not override a shared case or DS variable. */
+.project-dialog:has(.editorial-case) .reading-progress {
+  background:var(--section-label-red, #d13d3a);
+}
+.editorial-case :is(.risk-section-heading>span,.hz-section-head>.hz-kicker) {
+  color:var(--section-label-red, #d13d3a);
+}
+.editorial-case #hz-system>.hz-section-head>.hz-kicker {
+  color:var(--section-label-red, #d13d3a)!important;
+}
+.editorial-case :is(.editorial-nav,.hz-case-nav) a:is([aria-current="location"],:hover) {
+  box-shadow:0 1px 0 var(--section-label-red, #d13d3a);
+}
