@@ -1,0 +1,377 @@
+/* v10.04 — requested home-page typography and spacing refinements. */
+
+/* Let each stage caption occupy one complete line at its existing text size. */
+.hero-studio .hero-orbit-note.orbit-right {
+  width: max-content;
+  max-width: 100%;
+}
+.hero-studio .orbit-right .hero-stage-copy {
+  white-space: nowrap;
+}
+
+/* Keep the inherited 17px / mobile 16px lead; add a soft marker instead. */
+#about .profile-intro .profile-lead mark {
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  padding: 0 .12em .08em;
+  background: linear-gradient(transparent 56%, #ffc40038 56%, #ffc40038 94%, transparent 94%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+#about .profile-lead .profile-role {
+  white-space: nowrap;
+}
+
+/* Education shares the career-list markup and its type scale/date columns. */
+#about .education-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#about .education-list li p {
+  margin: 4px 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+#about .capability-software [data-software="InDesign"] {
+  --software-ink: #a04465;
+  --software-surface: #f7e7ed;
+  --software-rule: #dfbdcb;
+}
+
+/* Keep the archive cover, caption and toggle at the same size in both states. */
+#visual {
+  --archive-cover-height: clamp(210px, 26vw, 380px);
+  --archive-label-bottom: 27px;
+  --archive-label-size: 17px;
+  --archive-toggle-bottom: 29px;
+  --archive-toggle-size: 44px;
+}
+#visual .visual-disclosure > .visual-disclosure-summary {
+  height: var(--archive-cover-height);
+  border-radius: 9px;
+}
+#visual .visual-disclosure .visual-disclosure-copy {
+  bottom: var(--archive-label-bottom);
+  font-size: var(--archive-label-size);
+}
+#visual .visual-disclosure .visual-disclosure-icon {
+  bottom: var(--archive-toggle-bottom);
+  width: var(--archive-toggle-size);
+  height: var(--archive-toggle-size);
+}
+
+/* v10.05: one continuous desktop heading with the same type size throughout. */
+.portfolio-feedback .feedback-heading h2 {
+  margin-bottom: 12px;
+  max-width: none;
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.55;
+  white-space: nowrap;
+  text-wrap: normal;
+}
+
+/* Halve the image-to-next-card text area without compressing project images. */
+.collection .collection-grid {
+  row-gap: 24px;
+}
+.collection .project-open {
+  row-gap: 8px;
+}
+.collection .card-copy h3 {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.collection .card-copy p {
+  margin: 0;
+  line-height: 1.8;
+}
+.collection .card-arrow {
+  min-height: 26px;
+  margin: 0;
+  padding: 4px 0 0;
+  align-items: center;
+  font-size: 21px;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  #visual { --archive-cover-height: 260px; }
+}
+@media (max-width: 780px) {
+  .portfolio-feedback .feedback-heading h2 {
+    font-size: clamp(26px, 5.8vw, 40px);
+    white-space: normal;
+    text-wrap: pretty;
+  }
+  .collection .collection-grid { row-gap: 28px; }
+  .collection .project-open { row-gap: 10px; }
+  .collection .card-arrow { min-height: 36px; }
+}
+@media (max-width: 520px) {
+  #visual {
+    --archive-cover-height: 215px;
+    --archive-label-bottom: 21px;
+    --archive-label-size: 15px;
+    --archive-toggle-bottom: 23px;
+    --archive-toggle-size: 37px;
+  }
+}
+
+/* v12: keep the existing resume styling, with three content-sized columns. */
+#about .profile-resume {
+  grid-template-columns: minmax(0, 26fr) minmax(0, 34fr) minmax(0, 40fr);
+  gap: clamp(24px, 2.5vw, 36px);
+}
+#about .profile-resume > .profile-card {
+  /* Reset legacy grid-column / grid-row rules on experience and education. */
+  grid-area: auto;
+  min-width: 0;
+  margin: 0;
+  align-self: start;
+}
+#about .profile-resume .career-list li {
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 16px;
+}
+#about .profile-resume .participation-list li {
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 10px;
+}
+#about .profile-resume .profile-card > h3 { gap: 12px; }
+
+/* Keep website previews top-aligned after their positions in the wall change.
+   Show both new artwork sheets in full inside the existing thumbnail frames. */
+#visual .archive-tile img { object-position: center; }
+#visual .archive-tile img[src*="kunjung"],
+#visual .archive-tile img[src*="aishin"] { object-position: top; }
+#visual .archive-tile-illustrations button { background: #f5f4ef; }
+#visual .archive-tile-retaildisplay button { background: #fff; }
+#visual .archive-tile-zeiss-display-series button { background: #fff; }
+#visual .archive-tile-illustrations button img,
+#visual .archive-tile-zeiss-display-series button img,
+#visual .archive-tile-retaildisplay button img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  #about .profile-resume .career-list li {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+@media (max-width: 1100px) {
+  #about .profile-resume { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 520px) {
+  #about .profile-resume .career-list li { grid-template-columns: 1fr; gap: 5px; }
+}
+
+/* v13: date, title, and description share a row; narrow screens may wrap. */
+#about .profile-resume .participation-list li {
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px 0;
+  align-items: baseline;
+}
+#about .profile-resume .participation-list li:last-child { padding-bottom: 0; }
+#about .participation-list time { padding-top: 0; font-size: 9.5px; }
+#about .participation-copy { min-width: 0; line-height: 1.85; }
+#about .participation-copy h4 {
+  display: inline;
+  margin: 0 8px 0 0;
+  font-size: 13px;
+  line-height: inherit;
+}
+#about .participation-copy p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: inherit;
+}
+
+/* A subtle edge keeps white artwork distinct from the gallery background. */
+#visual .archive-image-open { border: 1px solid #bbc1b5; box-sizing: border-box; }
+#visual .archive-tile-illustrations button img {
+  object-fit: cover;
+  object-position: center;
+}
+#visual .archive-tile-retaildisplay button img {
+  object-fit: cover;
+  object-position: top;
+}
+.archive-lightbox-stage > img {
+  box-sizing: border-box;
+  border: 1px solid #bbc1b5;
+  background: #fff;
+  box-shadow: 0 3px 18px rgb(34 58 38 / 12%);
+}
+
+/* v14: preserve the existing hierarchy, with matching sizes across columns. */
+#about .profile-resume .profile-card > h3 {
+  font-family: var(--sans);
+  font-size: 16px;
+}
+#about .profile-resume .career-list h4 {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+}
+#about .profile-resume .career-list p {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+}
+#about .profile-resume .career-list time { font-size: 10px; }
+
+/* v15: show the supplied laptop covers inside the existing gallery frames. */
+#visual .archive-cover-kunjung button { background: #1f5a8c; }
+#visual .archive-cover-aishin button {
+  background: linear-gradient(to bottom, #fff 50%, #51308c 50%);
+}
+#visual .archive-tile.archive-cover-kunjung button img,
+#visual .archive-tile.archive-cover-aishin button img {
+  object-fit: contain;
+  object-position: center;
+}
+#visual .archive-tile.archive-cover-zeiss-children button img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* v16: keep the supplied artwork intact and trim only the unwanted edges. */
+#visual .archive-cover-crop {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+#visual .archive-cover-kunjung .archive-cover-crop {
+  aspect-ratio: 1138 / 636;
+}
+#visual .archive-cover-aishin .archive-cover-crop {
+  aspect-ratio: 1155 / 633;
+}
+#visual .archive-tile .archive-cover-crop > img {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+/* v17: one-line introduction with a small contact line beneath it. */
+#about .profile-heading h2 {
+  white-space: nowrap;
+}
+#about .profile-heading h2 i {
+  display: inline;
+  margin: 0 0 0 .12em;
+}
+#about .profile-heading .profile-contact {
+  margin: 8px 0 0;
+  font: 400 12px/1.8 var(--sans);
+  letter-spacing: 0;
+  color: #617157;
+}
+#about .profile-contact a {
+  color: inherit;
+  font: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+}
+#about .profile-contact a:hover,
+#about .profile-contact a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (min-width: 851px) {
+  #about .profile-introduction {
+    grid-template-columns: minmax(max-content, 1fr) minmax(0, 1.12fr);
+  }
+}
+@media (max-width: 600px) {
+  #about .profile-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+}
+
+/* v20: original identity layout with a compact, unruled contact link. */
+#about .profile-heading .profile-contact {
+  margin: 4px 0 0;
+}
+#about .profile-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 24px;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+#about .profile-contact .profile-mail-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  color: #7b8b70;
+}
+#about .profile-contact a:hover,
+#about .profile-contact a:focus-visible {
+  color: #254136;
+  border: 0;
+  text-decoration: none;
+}
+#about .profile-contact a:focus-visible {
+  outline: 2px solid #73845f;
+  outline-offset: 4px;
+}
+
+/* Three systems cases share a row on desktop; smaller screens retain readable cards. */
+@media (min-width: 1001px) {
+  #research-work .collection-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 28px;
+  }
+  #research-work .project-open {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto 1fr auto;
+    row-gap: 12px;
+  }
+  #research-work .card-number { grid-column: 1; grid-row: 1; }
+  #research-work .case-status { grid-column: 1; grid-row: 2; justify-self: start; }
+  #research-work .card-visual { grid-row: 3; }
+  #research-work .card-copy { grid-row: 4; }
+  #research-work .card-arrow { grid-row: 5; }
+}
+@media (min-width: 781px) and (max-width: 1000px) {
+  #research-work .collection-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Extend the original cover's turquoise edge texture behind the complete square artwork. */
+#visual .archive-image-open[data-archive-src*="images-visual-goldfish-island-"] {
+  background: #1aa7ab;
+}
+#visual .archive-image-open[data-archive-src*="images-visual-goldfish-island-"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 0 1px;
+  border-image: url("images-visual-goldfish-island-01.jpg") 0 12 fill / 0 50% / 0 stretch;
+}
+#visual .archive-image-open[data-archive-src*="images-visual-goldfish-island-"] > img {
+  position: relative;
+  z-index: 1;
+}
