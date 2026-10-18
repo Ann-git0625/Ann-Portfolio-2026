@@ -1,0 +1,59 @@
+/* Give mobile skill labels and software names enough room to read. */
+@media (max-width: 700px) {
+  #about .capability-group { padding: 24px 20px; min-width: 0; }
+  #about .capability-body { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+  #about .capability-skills {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    columns: auto;
+    gap: 8px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  #about .capability-skills li { min-width: 0; word-break: normal; }
+}
+@media (max-width: 1150px) {
+  #about .capability-software .software-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+    width: 100%;
+    max-width: 100%;
+    gap: 16px 12px;
+    align-items: start;
+  }
+  #about .software-icon-grid li {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    gap: 8px;
+  }
+  #about .software-icon-grid .software-name {
+    min-height: 0;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+}
+
+/* Center the opening title and summary consistently across mobile cases. */
+@media (max-width: 700px) {
+  #project-dialog .commercial-hero :is(.editorial-hero-title, .hz-hero-title) {
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+  #project-dialog .commercial-hero :is(.editorial-hero-title, .hz-hero-title) > :is(h2, p) {
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+    text-align: center !important;
+    text-wrap: balance;
+  }
+  #project-dialog .commercial-hero .hz-hero-title h2 > span {
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
