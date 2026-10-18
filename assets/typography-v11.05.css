@@ -1,0 +1,206 @@
+/* Shared roles: section, case title, chapter, card, body, caption and metadata.
+   Prototype screenshots and the opening artwork keep their own visual identity. */
+:root {
+  --type-section: clamp(36px, 3.2vw, 50px);
+  --type-identity: clamp(32px, 2.7vw, 44px);
+  --type-lead: clamp(21px, 1.5vw, 24px);
+  --type-case: clamp(36px, 4vw, 56px);
+  --type-chapter: clamp(28px, 2.4vw, 34px);
+  --type-card: 22px;
+  --type-subheading: 18px;
+  --type-item: 16px;
+  --type-body: 15px;
+  --type-compact: 14px;
+  --type-caption: 13px;
+  --type-meta: 11px;
+  --leading-body: 1.85;
+  --leading-heading: 1.45;
+}
+
+/* Home page section headings and shared labels. */
+:is(#work, #research-work, #visual) .folio-collection-heading h2,
+#feedback :is(.feedback-heading, .iterations-heading) h2 {
+  font: 400 var(--type-section)/var(--leading-heading) var(--serif);
+  letter-spacing: -.025em;
+  max-width: none;
+  white-space: normal;
+  text-wrap: pretty;
+  margin: 0;
+}
+#feedback :is(.feedback-heading, .iterations-heading) h2 {
+  font-size: clamp(32px, 2.8vw, 44px);
+}
+:is(#work, #research-work, #visual) .folio-collection-heading h2 em,
+#feedback :is(.feedback-heading, .iterations-heading) h2 em {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  font-style: normal;
+  color: #758667;
+}
+:is(#work, #research-work, #visual) .collection-heading-kicker,
+#about .profile-heading > div > .section-index,
+#feedback :is(.feedback-heading, .iterations-heading) > .section-index {
+  font: 400 var(--type-meta)/1.5 var(--mono);
+  letter-spacing: .14em;
+}
+
+/* Collection titles stay on one line at tablet and phone widths. */
+@media (max-width: 1200px) {
+  :is(#work, #research-work, #visual) .folio-collection-heading {
+    container-type: inline-size;
+  }
+  :is(#work, #research-work, #visual) .folio-collection-heading h2 {
+    font-size: clamp(16px, 7.2cqw, 36px);
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+  :is(#work, #research-work, #visual) .folio-collection-heading h2 em {
+    display: inline;
+  }
+}
+
+/* About: identity, statement, resume headings and reading text. */
+#about { --type-identity: 32px; --type-lead: 17px; }
+@media (min-width: 1101px) {
+  #about {
+    --type-subheading: 16px;
+    --type-item: 15px;
+    --type-body: 14px;
+    --type-compact: 13px;
+    --type-meta: 10px;
+  }
+}
+
+#about .profile-heading h2 { font-size: var(--type-identity); line-height: 1.4; }
+#about .profile-heading h2 i { font-size: 1.3125em; }
+#about .profile-intro p { font-size: var(--type-body); line-height: var(--leading-body); }
+#about .profile-intro p:not(.profile-lead) {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-ideograph;
+  text-wrap: pretty;
+}
+#about .profile-intro p.profile-lead { font-size: var(--type-lead); line-height: 1.65; margin: 0 0 16px; }
+#about .profile-contact, #about .profile-contact a { font-size: var(--type-caption); }
+#about .profile-resume .profile-card > h3,
+#about .profile-capabilities > h3 {
+  font: 500 var(--type-subheading)/1.5 var(--sans);
+}
+#about .profile-resume .profile-card > h3 { padding-bottom: 14px; }
+#about .profile-resume .profile-card > h3 > span,
+#about .profile-capabilities > h3 > span,
+#about .profile-resume .career-list time {
+  font: 400 var(--type-meta)/1.7 var(--mono);
+}
+#about .profile-resume .profile-card > h3 > span,
+#about .profile-capabilities > h3 > span { letter-spacing: .08em; color: #6e7e5b; }
+#about .profile-resume .career-list h4 { font-size: var(--type-item); line-height: 1.65; }
+#about .profile-resume .career-list h4 span,
+#about .profile-resume .career-list p {
+  font-size: var(--type-compact);
+  line-height: 1.75;
+}
+#about .capability-heading h4 { font: 500 var(--type-card)/1.4 var(--sans); }
+#about .capability-skills { font-size: var(--type-compact); line-height: 1.8; }
+#about .software-name { font-size: var(--type-meta); line-height: 1.5; }
+#about .profile-resume .career-list li { grid-template-columns: 124px minmax(0, 1fr); column-gap: 18px; }
+#about .profile-resume .participation-list li { grid-template-columns: 72px minmax(0, 1fr); column-gap: 16px; }
+
+/* Project names stay readable at the same size instead of shrinking to fit. */
+:is(#work, #research-work) .card-copy h3 {
+  font: 400 var(--type-card)/1.5 var(--serif);
+  letter-spacing: -.015em;
+  white-space: normal;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+  margin: 0 0 8px;
+}
+:is(#work, #research-work) .card-copy p {
+  font: 400 var(--type-body)/var(--leading-body) var(--sans);
+  white-space: normal;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+:is(#work, #research-work) .card-arrow > span,
+#visual .archive-tile > figcaption {
+  font: 400 var(--type-caption)/1.7 var(--sans);
+}
+#visual { --archive-label-size: var(--type-subheading); }
+
+/* Case studies use the same hierarchy across all six projects. */
+#project-dialog .editorial-case { font-size: var(--type-body); line-height: var(--leading-body); }
+#project-dialog .editorial-case .commercial-hero :is(.hz-hero-title, .editorial-hero-title) h2 {
+  font-size: var(--type-case) !important;
+  line-height: 1.35 !important;
+}
+#project-dialog .editorial-case :is(.risk-section-heading h3, .hz-section-head h3,
+  .hz-system-head h3, .hz-overview-statement h3, .editorial-overview-statement) {
+  font-size: var(--type-chapter) !important;
+  line-height: 1.5 !important;
+}
+#project-dialog .editorial-case :is(.risk-section h4, .risk-phase-heading h4,
+  .hz-section h4, .hz-system-section h4) {
+  font-size: var(--type-subheading) !important;
+  line-height: 1.6 !important;
+}
+#project-dialog .editorial-case :is(.learning-stage-flow h4, .luma-flow-compact h4) {
+  font-size: var(--type-item) !important;
+}
+#project-dialog .editorial-case :is(p, .you-feature-list li, .learning-question-list li,
+  .learning-knowledge-details dt, .learning-knowledge-details dd) {
+  font-size: var(--type-body) !important;
+  line-height: var(--leading-body) !important;
+}
+#project-dialog .editorial-case :is(figcaption, figcaption p, .commercial-showcase p,
+  .hz-eyebrow, .hz-flow-note, .hz-ds-note, .hz-metrics p) {
+  font-size: var(--type-caption) !important;
+  line-height: 1.75 !important;
+}
+#feedback :is(.feedback-heading > p, .iterations-heading > p, .iteration-notes li) {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+#feedback .iteration-caption { font-size: var(--type-caption); line-height: 1.75; }
+
+/* Fit feedback titles to their own column on tablets and phones. */
+#feedback :is(#feedback-title, #iterations-title) em {
+  display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 1200px) {
+  #feedback :is(.feedback-heading, .iterations-heading) {
+    container-type: inline-size;
+  }
+  #feedback :is(#feedback-title, #iterations-title) {
+    font-size: clamp(16px, 7.2cqw, 32px);
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+  #feedback :is(#feedback-title, #iterations-title) em { display: inline; }
+}
+
+@media (min-width: 1001px) {
+  :is(#work, #research-work) .project-card { align-self: stretch; }
+  :is(#work, #research-work) .project-open { height: 100%; }
+}
+@media (max-width: 780px) {
+  :root {
+    --type-section: clamp(28px, 5.2vw, 36px);
+    --type-case: clamp(32px, 8vw, 40px);
+    --type-chapter: 26px;
+    --type-card: 20px;
+    --type-body: 14px;
+  }
+}
+@media (max-width: 600px) {
+  #about { --type-identity: clamp(28px, 7.6vw, 32px); }
+  #about .profile-resume .career-list li { grid-template-columns: 112px minmax(0, 1fr); column-gap: 16px; }
+  #about .profile-resume .career-list time { font-size: 10px; }
+  #about .profile-resume .participation-list li { grid-template-columns: 64px minmax(0, 1fr); }
+}
+@media (max-width: 380px) {
+  #about .profile-resume .career-list li { grid-template-columns: 100px minmax(0, 1fr); column-gap: 12px; }
+  #about .profile-resume .career-list time { font-size: 9px; }
+  #about .profile-resume .participation-list li { grid-template-columns: 58px minmax(0, 1fr); }
+}
