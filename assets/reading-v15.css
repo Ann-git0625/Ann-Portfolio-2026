@@ -1,0 +1,123 @@
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-sans-extra-400.woff2?v=14.1') format('woff2');unicode-range:U+4E16,U+520A,U+53F0,U+5546,U+570B,U+6566,U+66F8,U+6A3A,U+6AE5,U+6F6D,U+714C,U+71DF,U+73A9,U+793E,U+7C4D,U+8056,U+8A95,U+8CA8,U+8CBF,U+904A,U+9716}
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-sans-extra-700.woff2?v=14.1') format('woff2');unicode-range:U+4E16,U+520A,U+53F0,U+5546,U+570B,U+6566,U+66F8,U+6A3A,U+6AE5,U+6F6D,U+714C,U+71DF,U+73A9,U+793E,U+7C4D,U+8056,U+8A95,U+8CA8,U+8CBF,U+904A,U+9716}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-serif-extra-400.woff2?v=14.1') format('woff2');unicode-range:U+4E16,U+520A,U+53F0,U+5546,U+570B,U+6566,U+66F8,U+6A3A,U+6AE5,U+6F6D,U+714C,U+71DF,U+73A9,U+793E,U+7C4D,U+8056,U+8A95,U+8CA8,U+8CBF,U+904A,U+9716}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-serif-extra-700.woff2?v=14.1') format('woff2');unicode-range:U+4E16,U+520A,U+53F0,U+5546,U+570B,U+6566,U+66F8,U+6A3A,U+6AE5,U+6F6D,U+714C,U+71DF,U+73A9,U+793E,U+7C4D,U+8056,U+8A95,U+8CA8,U+8CBF,U+904A,U+9716}
+/* A single reading scale and left edge across all eight case studies. */
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-sans-v16-400.woff2?v=21.2') format('woff2')}
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-sans-v16-700.woff2?v=21.2') format('woff2')}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-serif-v16-400.woff2?v=21.2') format('woff2')}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-serif-v16-700.woff2?v=21.2') format('woff2')}
+/* v11.03: complete the current site text with matching Noto TC glyphs. */
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-sans-supplement-v11.03-400.woff2') format('woff2');unicode-range:U+4E58,U+5357,U+599D,U+5C71,U+5CF0,U+5CF6,U+5DBC,U+5E06,U+5EAD,U+6176,U+6182,U+62BD,U+65C5,U+6E2F,U+8239,U+98DF,U+9B5A}
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-sans-supplement-v11.03-700.woff2') format('woff2');unicode-range:U+4E58,U+5357,U+599D,U+5C71,U+5CF0,U+5CF6,U+5DBC,U+5E06,U+5EAD,U+6176,U+6182,U+62BD,U+65C5,U+6E2F,U+8239,U+98DF,U+9B5A}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:400;font-display:swap;src:url('fonts-serif-supplement-v11.03-400.woff2') format('woff2');unicode-range:U+4E58,U+5357,U+599D,U+5C71,U+5CF0,U+5CF6,U+5DBC,U+5E06,U+5EAD,U+6176,U+6182,U+62BD,U+65C5,U+6E2F,U+8239,U+98DF,U+9B5A}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:700;font-display:swap;src:url('fonts-serif-supplement-v11.03-700.woff2') format('woff2');unicode-range:U+4E58,U+5357,U+599D,U+5C71,U+5CF0,U+5CF6,U+5DBC,U+5E06,U+5EAD,U+6176,U+6182,U+62BD,U+65C5,U+6E2F,U+8239,U+98DF,U+9B5A}
+/* Complete the portfolio text with matching local Noto TC subsets. */
+@font-face{font-family:'Ann Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts-sans-supplement-v11.05.woff2') format('woff2');unicode-range:U+4F34,U+50BE,U+518A,U+51AC,U+51F8,U+522A,U+5348,U+540A,U+5713,U+58A8,U+590F,U+591C,U+592A,U+5B98,U+5C4F,U+5D34,U+6284,U+647A,U+661F,U+6625,U+6696,U+66C6,U+66EC,U+68EE,U+6AC3,U+6B3E,U+6CB9,U+6D64,U+6E56,U+6F2B,U+706B,U+7159,U+7210,U+7554,U+7A3F,U+7BAD,U+7BC7,U+7C21,U+8336,U+85DD,U+8A02,U+9999}
+@font-face{font-family:'Ann Serif';font-style:normal;font-weight:200 900;font-display:swap;src:url('fonts-serif-supplement-v11.05.woff2') format('woff2');unicode-range:U+4F34,U+50BE,U+518A,U+51AC,U+51F8,U+522A,U+5348,U+540A,U+5713,U+58A8,U+590F,U+591C,U+592A,U+5B98,U+5C4F,U+5D34,U+6284,U+647A,U+661F,U+6625,U+6696,U+66C6,U+66EC,U+68EE,U+6AC3,U+6B3E,U+6CB9,U+6D64,U+6E56,U+6F2B,U+706B,U+7159,U+7210,U+7554,U+7A3F,U+7BAD,U+7BC7,U+7C21,U+8336,U+85DD,U+8A02,U+9999}
+/* Supplementary subsets cover missing characters in both font families. */
+:root{--sans:'Ann Sans','Microsoft JhengHei',sans-serif;--serif:'Ann Serif','Songti TC',serif}
+.editorial-case{font-size:15px;line-height:1.85}
+.editorial-case p{font-family:var(--sans);font-size:15px!important;line-height:1.9!important;letter-spacing:0!important;text-align:left;word-break:normal;overflow-wrap:break-word}
+.editorial-case :is(.commercial-showcase p,.hz-eyebrow,.hz-flow-note,.hz-ds-note,.hz-metrics p){font-size:12px!important;line-height:1.8!important}
+.editorial-case .hz-overview-statement h3{font:400 clamp(27px,2.5vw,36px)/1.5 var(--serif)!important;letter-spacing:0!important;text-wrap:balance;margin:0 0 18px}
+.editorial-case :is(p,li,dd){text-wrap:pretty}
+.editorial-case .risk-section :is(p,dd){text-align:left!important;text-justify:auto;text-align-last:auto;letter-spacing:0!important}
+.editorial-case .commercial-hero h2{font-family:var(--serif)!important;letter-spacing:0!important}
+.editorial-case :is(.risk-section-heading,.hz-section-head){display:block!important;margin:0 0 30px!important;padding:0!important;max-width:none!important;text-align:left}
+.editorial-case :is(.risk-section-heading>span,.hz-section-head>.hz-kicker){display:block!important;font:700 11px/1.5 var(--sans)!important;letter-spacing:.08em;color:#716846;margin:0 0 14px;padding:0!important}
+.editorial-case :is(.risk-section-heading h3,.hz-section-head h3,.hz-system-head h3){font:400 clamp(27px,2.5vw,36px)/1.5 var(--serif)!important;color:#254136!important;letter-spacing:0!important;max-width:31em!important;margin:0 0 18px!important;text-wrap:pretty;word-break:normal}
+.editorial-case :is(.risk-section-heading>.risk-section-intro,.hz-section-head>p){font:400 15px/1.95 var(--sans)!important;max-width:70ch!important;margin:0!important;color:#536354}
+.editorial-case .editorial-overview-statement{font:400 clamp(27px,2.5vw,36px)/1.5 var(--serif)!important;letter-spacing:0!important;text-wrap:pretty}
+.editorial-case :is(.editorial-chapter,.hz-section,.hz-system-section){padding:56px 6%!important;border-top:1px solid #bec8b5!important}
+.editorial-case .editorial-chapter>.editorial-subsection+.editorial-subsection{margin-top:38px!important;padding-top:32px!important;border-top:1px solid #c4cdbb!important}
+.editorial-case .editorial-chapter .risk-section-heading:not(:has(.risk-section-intro)){display:block!important}
+.editorial-case :is(.risk-section h4,.risk-phase-heading h4,.hz-section h4,.hz-system-section h4){font:700 19px/1.6 var(--sans)!important;color:#254136!important;margin:0 0 10px;letter-spacing:0}
+.editorial-case :is(.risk-section>p,.risk-section-intro,.you-feature-copy,.risk-card p,.risk-grid p,.risk-phase p,.hz-challenge-pair p,.hz-decision-copy p){font-size:15px!important;line-height:1.95!important}
+.editorial-case .risk-phase-heading{align-items:start;gap:14px;margin-bottom:18px}
+.editorial-case .risk-phase-heading>span{display:grid;place-items:center;width:32px;height:32px;flex:none;font:700 12px var(--sans);background:#e0e6d3;border:1px solid #b8c5a9;color:#40593e}
+.editorial-case :is(.risk-next-step,.practice-validation){margin-top:32px!important;padding:24px!important;background:#e6ebdc!important}
+.editorial-case :is(.risk-next-step h3,.practice-validation h3){font:700 22px/1.6 var(--sans)!important;letter-spacing:0}
+.editorial-case .editorial-evidence{margin:22px 0 0;padding:0;border:0;border-radius:0;background:transparent}
+.editorial-case img{max-width:100%}
+.commercial-showcase :is(.showcase-device-screen,.showcase-detail-card,.showcase-research-board)>img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;margin:0}
+@media(min-width:900px){
+ .editorial-case .commercial-hero{display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr);gap:28px 32px;align-items:center;padding:28px 5% 24px;min-height:0}
+ .commercial-hero :is(.hz-hero-meta,.editorial-hero-meta){grid-column:1/-1;width:100%}
+ .commercial-hero :is(.hz-hero-title,.editorial-hero-title){grid-column:1;grid-row:2;text-align:left;margin:0!important;max-width:none;width:100%}
+ .editorial-case .commercial-hero :is(.hz-hero-title,.editorial-hero-title) h2{font:400 clamp(36px,4.5vw,60px)/1.3 var(--serif)!important;letter-spacing:-.02em!important;margin:10px 0 18px!important;max-width:100%;overflow-wrap:normal}
+ .editorial-case .commercial-hero :is(.hz-hero-title,.editorial-hero-title)>p{font:400 17px/1.9 var(--sans);letter-spacing:0;margin:0}
+ .editorial-case .commercial-hero .hz-hero-title .hz-eyebrow{font-size:11px;margin-bottom:18px;color:#738068}
+ .commercial-hero .commercial-showcase{grid-column:2;grid-row:2;margin:0!important;max-width:100%}
+ .commercial-showcase .showcase-stage{padding:26px 16px 18px}
+ .commercial-showcase.showcase-you .showcase-stage{padding-bottom:55px}
+ .commercial-showcase.showcase-research .showcase-stage{padding:0}
+ .commercial-showcase figcaption{font-size:11px;padding-top:14px}
+ .commercial-showcase .showcase-detail-card{right:10px;bottom:14px}
+ .commercial-showcase .showcase-document-deck{grid-template-columns:.6fr 1.4fr;gap:15px}
+ .commercial-showcase .showcase-document-intro>b{font-size:22px}
+ .commercial-hero :is(.hz-hero-bottom,.editorial-hero-foot){grid-column:1/-1;position:static;margin:0!important;padding-top:15px;border-top:1px solid #b9c6ad}
+}
+.editorial-case :is(.risk-main-artifact,.prototype-board,.hz-source-figure,.hz-flow-art,.hz-documentation figure,.research-figure,.knowledge-exp-example)>img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;transform:none}
+.editorial-case :is(.hz-flow-art,.hz-documentation figure,.prototype-board){overflow:visible}
+.editorial-case :is(.hz-flow-art,.hz-documentation figure):after{display:none}
+.editorial-case .hz-flow-art{padding:0;background:#e8ecdf}
+.editorial-case .hz-documentation-grid{display:grid;grid-template-columns:1fr;gap:24px}
+.editorial-case figcaption{font-size:12px;line-height:1.8;color:#576650}
+.editorial-case .research-gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.editorial-case .research-gallery .research-figure{margin:0;min-width:0}
+.editorial-case .research-gallery .research-figure>img{width:100%;height:420px;object-fit:contain;background:#e9eddf;border-radius:6px}
+.editorial-case .research-overview-figure>img{max-height:none}
+/* Focus each related group without concealing the design system documentation. */
+.case-tabset{margin-top:28px;min-width:0}
+.case-tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;border-bottom:1px solid #aebca3;margin-bottom:24px;padding:0;overscroll-behavior-x:contain}
+.case-tabs [role=tab]{flex:1 0 auto;display:flex;align-items:center;gap:10px;min-height:56px;padding:12px 16px;border:0;border-bottom:3px solid transparent;background:transparent;color:#5d6e58;text-align:left;cursor:pointer}
+.case-tabs [role=tab]>span{font:10px var(--mono);color:#8b8768}
+.case-tabs [role=tab]>b{font:700 13px/1.4 var(--sans);white-space:nowrap}
+.case-tabs [role=tab][aria-selected=true]{border-bottom-color:#6d7852;background:#dfe6d4;color:#254136}
+.case-tabs [role=tab]:focus-visible{outline:2px solid #6d7852;outline-offset:-3px}
+.editorial-case .case-tab-panel{margin:0!important;padding:24px!important;border:1px solid #c8d2bc!important;border-radius:6px;background:#f4f5ec;min-width:0}
+.editorial-case .case-tab-panel[hidden]{display:none!important}
+.editorial-case .case-tab-panel>.risk-phase-heading{margin-top:0}
+.editorial-case .case-tab-panel :is(.you-feature-copy,.you-feature-list){max-width:85ch}
+.editorial-case .learning-document-tabs{display:block;min-width:0}
+.editorial-case .learning-document-tabs .artifact-evidence-card{display:block!important;border:1px solid #c8d2bc;box-shadow:none;background:#f4f5ec}
+.editorial-case .case-image-expand{display:block;width:100%;padding:0;border:0;border-radius:0;background:#e7ebdf;position:relative;cursor:zoom-in}
+.editorial-case .case-image-expand:after{content:'閱讀完整文件 ＋';position:absolute;right:12px;bottom:12px;padding:7px 11px;background:#f7f5eefa;border:1px solid #b8c5a9;color:#40553c;font:11px var(--sans);border-radius:3px}
+.editorial-case .case-image-expand>img{display:block!important;width:100%!important;height:420px!important;max-height:none!important;object-fit:contain!important;margin:0}
+.editorial-case .case-image-expand[aria-expanded=true]{cursor:zoom-out}
+.editorial-case .case-image-expand[aria-expanded=true]>img{height:auto!important;object-fit:contain!important}
+.editorial-case .case-image-expand[aria-expanded=true]:after{content:'收合文件 −'}
+.editorial-case .artifact-evidence-card>figcaption{display:block;padding:20px 0 0!important;margin:0;background:transparent!important;color:#52664a!important;border:0}
+.editorial-case .artifact-evidence-card figcaption :is(span,em){color:#52664a!important;font-size:13px!important;font-style:normal}
+.editorial-case .artifact-evidence-card figcaption .risk-phase-heading{margin:0 0 8px}
+.editorial-case .artifact-evidence-card figcaption>em{display:block;margin-top:3px}
+@media(max-width:899px){
+ .editorial-case .commercial-hero :is(.hz-hero-title,.editorial-hero-title) h2{font:400 clamp(36px,10vw,44px)/1.35 var(--serif)!important;letter-spacing:0!important;text-wrap:balance;max-width:100%}
+ .editorial-case .commercial-hero .hz-hero-title h2>span{font:400 15px/1.8 var(--serif)!important;letter-spacing:0!important}
+}
+.editorial-case .luma-flow-compact h4{font-size:16px!important;line-height:1.65!important}
+.editorial-case .learning-stage-flow h4{font-size:17px!important;line-height:1.65!important}
+@media(max-width:780px){
+ .editorial-case{font-size:14px}.editorial-case :is(.editorial-chapter,.hz-section,.hz-system-section){padding:38px 5%!important}
+ .editorial-case p{font-size:14px!important;line-height:1.9!important}
+ .editorial-case :is(.commercial-showcase p,.hz-eyebrow,.hz-flow-note,.hz-ds-note,.hz-metrics p){font-size:12px!important;line-height:1.8!important}
+ .editorial-case .hz-overview-statement h3{font-size:26px!important;line-height:1.55!important}
+ .editorial-case .commercial-hero :is(.hz-hero-title,.editorial-hero-title) h2{font:400 clamp(36px,10vw,44px)/1.35 var(--serif)!important;letter-spacing:0!important;text-wrap:balance;max-width:100%}
+ .editorial-case .commercial-hero .hz-hero-title h2>span{font:400 15px/1.8 var(--serif)!important;letter-spacing:0!important}
+ .editorial-case :is(.risk-section-heading h3,.hz-section-head h3,.hz-system-head h3,.editorial-overview-statement){font-size:26px!important;line-height:1.55!important}
+ .editorial-case :is(.risk-section-heading>.risk-section-intro,.hz-section-head>p,.risk-section>p,.risk-section-intro,.you-feature-copy,.risk-card p,.risk-grid p,.risk-phase p){font-size:14px!important}
+ .editorial-case :is(.risk-section h4,.risk-phase-heading h4,.hz-section h4,.hz-system-section h4){font-size:18px!important}
+ .case-tabs{margin-bottom:18px}.case-tabs [role=tab]{padding:11px 13px;min-height:52px}.case-tabs [role=tab]>b{font-size:12px}
+ .editorial-case .case-tab-panel{padding:18px!important}.editorial-case .case-image-expand>img{height:300px!important}
+ .editorial-case .research-gallery{gap:18px;grid-template-columns:1fr}.editorial-case .research-gallery .research-figure>img{height:auto;max-height:430px}
+}
+/* These final rules take precedence over older case-specific presentation rules. */
+#dialog-content .editorial-case p{line-height:1.9!important;letter-spacing:0!important;text-align:left!important;text-justify:auto;text-align-last:auto}
+#dialog-content .editorial-case :is(.editorial-project-facts dd,.hz-facts dd){font-size:15px;line-height:1.9;letter-spacing:0}
+.editorial-case .case-tabset>.case-tab-panel[hidden]{display:none!important}
+.editorial-case .learning-question-list{padding:0 0 0 1.35em;margin:20px 0 24px;max-width:74ch;list-style:disc}
+.editorial-case .learning-question-list li{display:list-item;margin:9px 0;padding:0 0 0 5px;font:400 15px/1.9 var(--sans);text-align:left}
+.editorial-case .learning-question-list li::marker{color:#7f8c68}
+@media(max-width:780px){#dialog-content .editorial-case :is(.editorial-project-facts dd,.hz-facts dd){font-size:14px}}
+@media(max-width:780px){.editorial-case .learning-question-list li{font-size:14px}}
