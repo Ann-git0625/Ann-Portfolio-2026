@@ -7,8 +7,8 @@
 }
 #visual .archive-wall {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 2vw, 28px);
-  padding-top: clamp(24px, 2.5vw, 36px);
+  gap: 24px;
+  padding-top: 32px;
   align-items: start;
 }
 #visual .archive-tile {
@@ -128,14 +128,18 @@
   outline-offset: 3px;
 }
 @media (max-width: 900px) {
-  #visual .archive-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #visual .archive-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding-top: 28px;
+  }
 }
 @media (max-width: 560px) {
   #visual { --archive-cover-height: 240px; }
   #visual .archive-wall {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-    padding-top: 22px;
+    gap: 16px;
+    padding-top: 24px;
   }
   #visual .archive-tile > figcaption { font-size: 14px; padding: 40px 16px 14px; }
   #visual-art-dialog .archive-lightbox-stage { padding: 18px 14px; }
