@@ -1,0 +1,172 @@
+/* Archive gallery: even image rows with titles revealed on interaction. */
+#visual { --archive-cover-height: clamp(240px, 27.6vw, 384px); }
+#visual .visual-disclosure > .visual-disclosure-summary { border-radius: 10px; }
+#visual .visual-disclosure-summary:focus-visible {
+  outline: 3px solid #526b4a;
+  outline-offset: 5px;
+}
+#visual .archive-wall {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding-top: 32px;
+  align-items: start;
+}
+#visual .archive-tile {
+  isolation: isolate;
+  border-radius: 10px;
+}
+#visual .archive-tile .archive-image-open {
+  aspect-ratio: 3 / 2;
+  border: 1px solid #bcc6b566;
+  border-radius: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+}
+/* Keep the Aishin gradient from repeating through the thumbnail border. */
+#visual .archive-tile.archive-cover-aishin .archive-image-open {
+  border: 0;
+  /* Match the centered artwork's white/purple split, including fractional edges. */
+  background-image: linear-gradient(to bottom, #fff 59.4%, #51308c 59.4%);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+/* Scale the complete composition, including its existing crop, as one layer.
+   The fixed button clips the layer without changing layout or caption position. */
+#visual .archive-tile .archive-tile-media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  background: inherit;
+  pointer-events: none;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 420ms cubic-bezier(.2, .7, .2, 1);
+}
+#visual .archive-tile:is(.archive-cover-kunjung, .archive-cover-aishin) .archive-tile-media {
+  display: grid;
+  align-content: center;
+}
+/* Disable legacy image-level zoom rules, including project-cover exceptions. */
+#visual .archive-tile .archive-image-open .archive-tile-media img {
+  transform: none;
+  transition: none;
+  filter: none;
+}
+/* Retain the source-specific framing after introducing the shared media layer. */
+#visual .archive-image-open[data-archive-src*="images-background-ue-visual-05"] .archive-tile-media > img {
+  position: absolute;
+  inset: auto 0 0;
+  height: 128%;
+  max-height: none;
+  object-fit: cover;
+  object-position: 75% bottom;
+}
+#visual .archive-project-cover .archive-image-open[data-archive-src*="images-visual-goldfish-island-"] .archive-tile-media > img {
+  object-fit: cover;
+  object-position: center 65%;
+}
+#visual .archive-tile > figcaption {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 44px 18px 16px;
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(transparent, rgb(12 24 19 / 55%) 55%, rgb(12 24 19 / 82%));
+  color: #fff;
+  font: 500 clamp(13px, 1vw, 15px)/1.6 var(--sans, sans-serif);
+  letter-spacing: .02em;
+  text-align: left;
+  text-wrap: pretty;
+  text-shadow: 0 1px 4px #0004;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: none;
+  transition: opacity 200ms ease, visibility 200ms ease;
+}
+#visual .archive-image-open:focus-visible + figcaption,
+#visual .archive-image-open:active + figcaption {
+  opacity: 1;
+  visibility: visible;
+}
+#visual .archive-image-open:focus-visible {
+  outline: 3px solid #526b4a;
+  outline-offset: 4px;
+}
+@media (hover: hover) and (pointer: fine) {
+  #visual .archive-tile .archive-image-open:is(:hover, :focus-visible) .archive-tile-media {
+    transform: scale(1.03);
+  }
+  #visual .archive-image-open:hover + figcaption {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Restore the compact title and original circular controls in one toolbar. */
+#visual-art-dialog #archive-art-title {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  color: #365044;
+  font: 400 13px/1.6 var(--sans, sans-serif);
+  letter-spacing: .025em;
+  overflow-wrap: anywhere;
+}
+#visual-art-dialog .archive-lightbox-toolbar { justify-content: space-between; }
+#visual-art-dialog .archive-lightbox-stage {
+  padding: 24px;
+}
+#visual-art-dialog .archive-project-heading { display: none; }
+#visual-art-dialog .archive-lightbox-stage.is-project > img + img {
+  margin-top: clamp(18px, 2.8vw, 36px);
+}
+#visual-art-dialog .archive-lightbox-controls button:focus-visible {
+  outline: 2px solid #526b4a;
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  #visual .archive-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding-top: 28px;
+  }
+}
+@media (max-width: 560px) {
+  #visual { --archive-cover-height: 240px; }
+  #visual .archive-wall {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+  }
+  #visual .archive-tile > figcaption { font-size: 14px; padding: 40px 16px 14px; }
+  #visual-art-dialog .archive-lightbox-stage { padding: 18px 14px; }
+}
+@media (max-width: 520px) {
+  #visual-art-dialog #archive-art-title { font-size: 11px; }
+  #visual-art-dialog .archive-lightbox-toolbar {
+    height: auto;
+    min-height: 64px;
+    padding-block: 12px;
+    gap: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #visual .archive-tile > figcaption { transition: none; }
+  #visual .archive-image-open img { transition: none; }
+  #visual .archive-tile .archive-image-open .archive-tile-media,
+  #visual .archive-tile .archive-image-open:is(:hover, :focus-visible) .archive-tile-media {
+    transform: none;
+    transition: none;
+  }
+}
